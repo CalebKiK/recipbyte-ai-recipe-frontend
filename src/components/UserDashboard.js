@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from 'react';
 import '../styles/UserDashboard.css';
 import Favourites from './Favourites';
 import Preferences from './Preferences';

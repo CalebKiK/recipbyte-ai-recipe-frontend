@@ -75,7 +75,7 @@ export default function DidYouKnow() {
         } while (newFact === prevFact); // Ensure it's different
         return newFact;
       });
-    }, 8000); // Change every 8 seconds
+    }, 5000); // Change every 5 seconds
 
     return () => clearInterval(interval);
   }, []);

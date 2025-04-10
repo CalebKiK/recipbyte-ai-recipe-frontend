@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import '../styles/HomePage.css';
-import DidYouKnow from './DidYouKnow';
 
 export default function HeroSection() {
 
@@ -43,7 +42,7 @@ export default function HeroSection() {
         <div className="hero-section-component">
             <h1>Welcome, $Username!</h1>
             <h2>Let's turn your ingredients into culinary magic.</h2>
-            <div classname="ingredients-section">
+            <div className="ingredients-section">
                 <div className="ingredients-input">
                     <input
                         placeholder='Add your ingredients here...'
@@ -95,7 +94,6 @@ export default function HeroSection() {
                     <button className='to-image-detection-btn'>Snap Ingredients 📸</button>
                 </div>
             </div>
-            <DidYouKnow />
         </div>
     );
 }
