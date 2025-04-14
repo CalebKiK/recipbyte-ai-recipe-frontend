@@ -17,6 +17,9 @@ body {
   font-family: 'Lato', sans-serif;
   max-width: 100vw;
   overflow-x: hidden;
+  align-items: center;
+  text-align: center;
+  background-color: #FAF1E6;
 }
 
 h1, h2, h3, h4, h5 {
