@@ -1,0 +1,102 @@
+.recipe-suggestions-component{
+    background-color: #C9A66B;
+    margin: 30px 300px;
+    border-radius: 5px;
+    padding: 20px 10px;
+}
+
+.recipe-suggestions-component h4{
+    margin: 20px 0px 30px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.recipe-suggestions{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.recipe-card{
+    background-color: #FAF1E6;
+    /* border: 1px solid #8B4513; */
+    border-radius: 5px;
+    margin: 0px 10px 10px;
+    text-align: left;
+}
+
+.recipe-card:hover{
+    background-color: #fff1e0;
+}
+
+.recipe-card img{
+    width: 250px;
+}
+
+.recipe-card h5{
+    font-size: 15px;
+    padding: 10px 0px 0px 10px;
+}
+
+.recipe-card p{
+    font-size: 13px;
+    padding: 5px 10px;
+}
+
+.recipe-choice-component{
+    background-color: #C9A66B;
+    margin: 30px 300px;
+    border-radius: 5px;
+    padding: 20px 10px;
+}
+
+.recipe-choice-btns button{
+    margin: 30px 30px 0px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.substitute-ingredient-btn{
+    background-color: #8B4513;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.substitute-ingredient-btn:hover{
+    background-color: #a05017;
+    transition: 0.4s ease-in;
+}
+
+.like-recipe-btn{
+    background-color: #D9D9D9; 
+    border: 1px solid #8B4513;
+    border-radius: 5px
+}
+
+.like-recipe-btn:hover{
+    background-color: #FAF1E6;
+    transition: 0.4s ease-in;
+}
+
+.dislike-recipe-btn{
+    background-color: #A9B190;
+    border: none;
+    border-radius: 5px
+}
+
+.dislike-recipe-btn:hover{
+    background-color: #c3cca7;
+    transition: 0.4s ease-in;
+}
+
+.why-recipe-component{
+    background-color: #C9A66B;
+    margin: 30px 300px;
+    border-radius: 5px;
+    padding: 20px 10px;
+}
+
+.recipe-choice-text, .why-recipe-text{
+    text-align: left;
+    margin: 20px 0px 10px;
+}

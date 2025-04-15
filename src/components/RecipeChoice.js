@@ -7,7 +7,7 @@ export default function RecipeChoice() {
         <div className="recipe-choice-component">
             <h2>Let’s make: $DishName</h2>
             <div className='recipe-choice-text'>
-                
+                <p>Placeholder text for this section</p>
             </div>
             <div className='recipe-choice-btns'>
                 <button className='substitute-ingredient-btn'>Substitute Ingredient</button>

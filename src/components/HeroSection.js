@@ -90,9 +90,9 @@ export default function HeroSection() {
                         <ul className='filters-list'></ul>
                     </div>
                     <div className='homepage-btns'>
-                        <button className='generate-recipe-btn'>Generate Recipes!</button>
-                        <button className='feeling-adventurous-btn'>Feeling Adventurous?</button>
                         <button className='to-image-detection-btn'>Snap Ingredients 📸</button>
+                        <button className='feeling-adventurous-btn'>Feeling Adventurous?</button>
+                        <button className='generate-recipe-btn'>Generate Recipes!</button>
                     </div>
                 </div>
             </div>
