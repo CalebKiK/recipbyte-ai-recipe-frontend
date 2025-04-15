@@ -42,58 +42,61 @@ export default function HeroSection() {
         <div className="hero-section-component">
             <h1>Welcome, $Username!</h1>
             <h2>Let's turn your ingredients into culinary magic.</h2>
-            <div className="ingredients-section">
-                <div className="ingredients-input">
-                    <input
-                        placeholder='Add your ingredients here...'
-                        value={ingredient}
-                        onChange={handleInputChange}
-                    />
-                    <button className='add-ingredient-btn' onClick={handleAddIngredient}>Add</button>
-                    <button className='filters-btn' onClick={toggleFilters}>
-                        <span role="img" aria-label="filters">⚙️</span>
-                    </button>
-                    {showFilters && (
-                        <div className='filters-dropdown'>
-                            <label>
-                                <input
-                                    type="checkbox"
-                                    value="vegetarian"
-                                    checked={dietryRestrictions.includes('vegetarian')}
-                                    onChange={() => handleRestrictionChange('vegetarian')}
-                                />
-                                Vegetarian
-                            </label>
-                            <label>
-                                <input
-                                    type="checkbox"
-                                    value="vegan"
-                                    checked={dietryRestrictions.includes('vegan')}
-                                    onChange={() => handleRestrictionChange('vegan')}
-                                />
-                                Vegan
-                            </label>
-                        </div>
-                    )}
-                </div>
-                <div className='ingredients-filters-list'>
-                    <ul className='ingredients-list'>
-                        {ingredientsList.map((item, index) => (
-                            <li key={index}>
-                                {item}
-                                <button onClick={() => handleRemoveIngredient(index)}>x</button>
-                            </li>
-                        ))
-                        }
-                    </ul>
-                    <ul className='filters-list'></ul>
-                </div>
-                <div className='homepage-btns'>
-                    <button className='generate-recipe-btn'>Generate Recipes!</button>
-                    <button className='feeling-adventurous-btn'>Feeling Adventurous?</button>
-                    <button className='to-image-detection-btn'>Snap Ingredients 📸</button>
+            <div className="ingredients-component">
+                <div className="ingredients-section">
+                    <div className="ingredients-input">
+                        <input
+                            placeholder='Add your ingredients here...'
+                            value={ingredient}
+                            onChange={handleInputChange}
+                        />
+                        <button className='add-ingredient-btn' onClick={handleAddIngredient}>Add</button>
+                        <button className='filters-btn' onClick={toggleFilters}>
+                            <span role="img" aria-label="filters">⚙️</span>
+                        </button>
+                        {showFilters && (
+                            <div className='filters-dropdown'>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        value="vegetarian"
+                                        checked={dietryRestrictions.includes('vegetarian')}
+                                        onChange={() => handleRestrictionChange('vegetarian')}
+                                    />
+                                    Vegetarian
+                                </label>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        value="vegan"
+                                        checked={dietryRestrictions.includes('vegan')}
+                                        onChange={() => handleRestrictionChange('vegan')}
+                                    />
+                                    Vegan
+                                </label>
+                            </div>
+                        )}
+                    </div>
+                    <div className='ingredients-filters-list'>
+                        <ul className='ingredients-list'>
+                            {ingredientsList.map((item, index) => (
+                                <li key={index}>
+                                    {item}
+                                    <button onClick={() => handleRemoveIngredient(index)}>x</button>
+                                </li>
+                            ))
+                            }
+                        </ul>
+                        <ul className='filters-list'></ul>
+                    </div>
+                    <div className='homepage-btns'>
+                        <button className='generate-recipe-btn'>Generate Recipes!</button>
+                        <button className='feeling-adventurous-btn'>Feeling Adventurous?</button>
+                        <button className='to-image-detection-btn'>Snap Ingredients 📸</button>
+                    </div>
                 </div>
             </div>
+            
         </div>
     );
 }

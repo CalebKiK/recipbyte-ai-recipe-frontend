@@ -1,3 +1,108 @@
 .hero-section-component{
-    margin: 200px;
+    margin: 30px 300px;
+}
+
+.hero-section-component h1{
+    margin: 30px 0px;
+}
+
+.hero-section-component h2{
+    margin: 30px 0px;
+}
+
+.ingredients-component{
+    background-color: #c9a66b76;
+    border-radius: 5px;
+    padding: 70px 100px;
+}
+
+.ingredients-section{
+ background-color: #C9A66B;
+ border-radius: 5px;
+ padding: 30px 0px;
+}
+
+.ingredients-input{
+    
+}
+
+.ingredients-input input{
+    height: 40px;
+    width: 300px;
+    padding: 0px 0px 0px 10px;
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.add-ingredient-btn{
+    height: 40px;
+    width: 80px;
+    border: 1px solid #8B4513;
+    background-color: #FAF1E6;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.add-ingredient-btn:hover{
+    background-color: #ffefd3;
+    transition: 0.4s ease-in;
+}
+
+.filters-btn{
+    background-color: #F5FFAC;
+    margin-left: 100px;
+    height: 40px;
+    width: 50px;
+    border: none;
+    border-radius: 5px;
+}
+
+.filters-btn:hover{
+    background-color: #f9ffcf;
+    transition: 0.4s ease-in;
+}
+
+.ingredients-list li{
+    background-color: #FAF1E6;
+    padding: 5px 10px;
+}
+
+.homepage-btns{
+
+}
+
+.homepage-btns button{
+    margin: 30px 30px 0px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.generate-recipe-btn{
+    background-color: #8B4513;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.feeling-adventurous-btn{
+    background-color: #D9D9D9; 
+    border: 1px solid #8B4513;
+    border-radius: 5px
+}
+
+.to-image-detection-btn{
+    background-color: #A9B190;
+    border: none;
+    border-radius: 5px
+}
+
+.did-you-know-component{
+    background-color: #8B4513;
+    margin: 0px 300px;
+    border-radius: 5px;
+    padding: 30px 0px;
+    color: rgb(255, 242, 226);
+}
+
+.did-you-know-component p{
+    margin-top: 30px;
 }

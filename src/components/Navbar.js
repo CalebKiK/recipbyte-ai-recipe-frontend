@@ -7,7 +7,7 @@ export default function Navbar() {
     return (
         <div className="navbar">
             <div className='navbar-logo'>
-                <img src='/images/logo_option_3.jpg' alt='bytebistro-logo'/>
+                <img src='/images/logo_option_3.png' alt='bytebistro-logo'/>
                 <h3>BYTEBISTRO</h3>
             </div>
             <div className='navbar-links'>

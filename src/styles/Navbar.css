@@ -1,18 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
 .navbar{
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: center;
-    padding: 20px 200px;
+    padding: 10px 200px;
     background-color: #FAF1E6;
 }
 
 .navbar-logo{
     display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
 .navbar-logo img{
-    height: 50px;
+    height: 40px;
+}
+
+.navbar-logo h3{
+    font-family: "Fredoka", sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    margin-left: 10px;
 }
 
 .navbar-links{
