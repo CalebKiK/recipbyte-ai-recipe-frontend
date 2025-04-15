@@ -16,17 +16,19 @@ export default function UserDashboard() {
     return (
         <div className="user-dashboard-component">
             <h1>Dashboard</h1>
-            <div className='dashboard-links'>
-                <button>Preferences</button>
-                <button>Recipe Favourites</button>
-                <button>Recipe History</button>
-                <button onClick={() => setShowModal(true)}>Logout</button>
-                {showModal && <LogoutModal onClose={() => setShowModal(false)} onLogout={handleLogout} />}
-            </div>
-            <div className='selected-dashboard-links'>
-                <Preferences />
-                <Favourites />
-                <RecipeHistory />
+            <div className='dashboard-content'>
+                <div className='dashboard-links'>
+                    <button>Preferences</button>
+                    <button>Recipe Favourites</button>
+                    <button>Recipe History</button>
+                    <button onClick={() => setShowModal(true)}>Logout</button>
+                    {showModal && <LogoutModal onClose={() => setShowModal(false)} onLogout={handleLogout} />}
+                </div>
+                <div className='selected-dashboard-link'>
+                    <Preferences />
+                    <Favourites />
+                    <RecipeHistory />
+                </div>
             </div>
         </div>
     );

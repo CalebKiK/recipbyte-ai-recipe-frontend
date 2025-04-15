@@ -1,0 +1,41 @@
+.user-dashboard-component{
+    background-color: #C9A66B;
+    margin: 30px 300px;
+    border-radius: 5px;
+    padding: 20px 10px;
+}
+
+.dashboard-content{
+    display: flex;
+}
+
+.dashboard-links{
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-links button{
+    margin: 20px 30px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+}
+
+.dashboard-links button:hover{
+    background-color: #FAF1E6;
+    transition: 0.5s ease-in;
+}
+
+.selected-dashboard-link{
+    background-color: #FAF1E6;
+    border-radius: 5px;
+    margin: 20px 0px;
+}
+
+.user-preferences-component, .user-favourites-component, .recipe-history-component{
+    margin: 30px;
+}
+
+.user-preferences-component h2, .user-favourites-component h2, .recipe-history-component h2{
+    
+}

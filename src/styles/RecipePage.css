@@ -26,6 +26,7 @@
 
 .recipe-card:hover{
     background-color: #fff1e0;
+    transition: 0.5s ease-in;
 }
 
 .recipe-card img{
