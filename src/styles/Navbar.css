@@ -7,6 +7,14 @@
     background-color: #FAF1E6;
 }
 
+.navbar-logo{
+    display: flex;
+}
+
+.navbar-logo img{
+    height: 50px;
+}
+
 .navbar-links{
     margin-left: 200px;
 }

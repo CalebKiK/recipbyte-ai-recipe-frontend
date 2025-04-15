@@ -6,7 +6,10 @@ import Link from 'next/link';
 export default function Navbar() {
     return (
         <div className="navbar">
-            <img src='' alt='bytebistro-logo'/>
+            <div className='navbar-logo'>
+                <img src='/images/logo_option_3.jpg' alt='bytebistro-logo'/>
+                <h3>BYTEBISTRO</h3>
+            </div>
             <div className='navbar-links'>
                 <Link href="/homepage">Home</Link>
                 <Link href="/recipes">Recipes</Link>
