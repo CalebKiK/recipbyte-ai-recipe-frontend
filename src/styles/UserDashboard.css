@@ -12,6 +12,7 @@
 .dashboard-links{
     display: flex;
     flex-direction: column;
+    border-right: 1px solid #b17a54;
 }
 
 .dashboard-links button{
@@ -29,7 +30,7 @@
 .selected-dashboard-link{
     background-color: #FAF1E6;
     border-radius: 5px;
-    margin: 20px 0px;
+    margin: 20px 30px;
 }
 
 .user-preferences-component, .user-favourites-component, .recipe-history-component{

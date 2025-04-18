@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import '../styles/HomePage.css';
 
 export default function HeroSection() {
@@ -9,6 +10,7 @@ export default function HeroSection() {
     const [ingredientsList, setIngredientsList] = useState([]);
     const [showFilters, setShowFilters] = useState(false);
     const [dietryRestrictions, setDietryRestrictions] = useState([]);
+    const router = useRouter();
 
     const handleInputChange = (event) => {
         setIngredient(event.target.value);
@@ -36,6 +38,14 @@ export default function HeroSection() {
         } else {
             setDietryRestrictions([...dietryRestrictions, restriction]);
         }
+    };
+
+    const goToImageDetectorPage = () => {
+        router.push('/image-detector');
+    };
+
+    const goToRecipePage = () => {
+        router.push('/recipes');
     };
 
     return (
@@ -90,9 +100,9 @@ export default function HeroSection() {
                         <ul className='filters-list'></ul>
                     </div>
                     <div className='homepage-btns'>
-                        <button className='to-image-detection-btn'>Snap Ingredients 📸</button>
-                        <button className='feeling-adventurous-btn'>Feeling Adventurous?</button>
-                        <button className='generate-recipe-btn'>Generate Recipes!</button>
+                        <button className='to-image-detection-btn' onClick={goToImageDetectorPage}>Snap Ingredients 📸</button>
+                        <button className='feeling-adventurous-btn' onClick={goToRecipePage}>Feeling Adventurous?</button>
+                        <button className='generate-recipe-btn' onClick={goToRecipePage}>Generate Recipes!</button>
                     </div>
                 </div>
             </div>

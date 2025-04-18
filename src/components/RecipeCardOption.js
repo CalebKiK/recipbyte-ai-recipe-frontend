@@ -8,6 +8,7 @@ export default function RecipeCard() {
             <img src='' alt="recipe-title"/>
             <h5>Recipe Title</h5>
             <p>Recipe Description (Optional)</p>
+            <p>Cooking Time: (Optional)</p>
             <p>Difficulty: (optional)</p>
             <p>Calories & Nutrition content</p>
         </div>

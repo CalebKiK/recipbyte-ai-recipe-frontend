@@ -12,7 +12,7 @@ export default function Navbar() {
             </div>
             <div className='navbar-links'>
                 <Link href="/homepage">Home</Link>
-                <Link href="/recipes">Recipes</Link>
+                {/* <Link href="/recipes">Recipes</Link> */}
                 <Link href="/dashboard">Dashboard</Link>
             </div>
         </div>
