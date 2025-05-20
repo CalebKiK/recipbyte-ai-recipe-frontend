@@ -41,11 +41,31 @@ export default function HeroSection() {
     };
 
     const goToImageDetectorPage = () => {
-        router.push('/image-detector');
+        alert("Image detection functionality not implemnted yet!")
+        // router.push('/image-detector');
     };
 
-    const handleRandomRecipe = async => {
-        pass
+    const handleRandomRecipe = async () => { // Corrected from `async =>`
+        try {
+            // Make a GET request to your random recipe endpoint
+            const response = await fetch('/api/recipes/random/'); // Notice the trailing slash!
+
+            if (response.ok) {
+                const data = await response.json();
+                // Since it's a single random recipe, wrap it in an array for consistency
+                // with how handleGenerateRecipes sends data to the recipes page
+                router.push(`/recipes?recipes=${encodeURIComponent(JSON.stringify([data]))}`);
+            } else if (response.status === 404) {
+                alert("No recipes found in the database. Please import some recipes first!");
+            }
+            else {
+                console.error("Failed to fetch random recipe:", response.status);
+                alert("Failed to fetch a random recipe. Please try again.");
+            }
+        } catch (error) {
+            console.error("Error fetching random recipe:", error);
+            alert("An error occurred while fetching a random recipe. Check console for details.");
+        }
     };
 
     const handleGenerateRecipes = async () => {
@@ -87,6 +107,11 @@ export default function HeroSection() {
                             placeholder='Add your ingredients here...'
                             value={ingredient}
                             onChange={handleInputChange}
+                            onKeyDown={(e) =>{
+                                if (e.key === 'Enter') {
+                                    handleAddIngredient();
+                                }
+                            }}
                         />
                         <button className='add-ingredient-btn' onClick={handleAddIngredient}>Add</button>
                         <button className='filters-btn' onClick={toggleFilters}>
