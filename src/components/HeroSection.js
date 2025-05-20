@@ -9,7 +9,7 @@ export default function HeroSection() {
     const [ingredient, setIngredient] = useState('');
     const [ingredientsList, setIngredientsList] = useState([]);
     const [showFilters, setShowFilters] = useState(false);
-    const [dietryRestrictions, setDietryRestrictions] = useState([]);
+    const [dietaryRestrictions, setDietaryRestrictions] = useState([]);
     const router = useRouter();
 
     const handleInputChange = (event) => {
@@ -33,10 +33,10 @@ export default function HeroSection() {
     };
 
     const handleRestrictionChange = (restriction) => {
-        if (dietryRestrictions.includes(restriction)) {
-            setDietryRestrictions(dietryRestrictions.filter((r) => r !== restriction));
+        if (dietaryRestrictions.includes(restriction)) {
+            setDietaryRestrictions(dietaryRestrictions.filter((r) => r !== restriction));
         } else {
-            setDietryRestrictions([...dietryRestrictions, restriction]);
+            setDietaryRestrictions([...dietaryRestrictions, restriction]);
         }
     };
 
@@ -44,10 +44,38 @@ export default function HeroSection() {
         router.push('/image-detector');
     };
 
-    const goToRecipePage = () => {
-        router.push('/recipes');
+    const handleRandomRecipe = async => {
+        pass
     };
 
+    const handleGenerateRecipes = async () => {
+        if(ingredientsList.length > 0) {
+            const ingredientsQuery = ingredientsList.map(encodeURIComponent).join(',');
+            const restrictionsQuery = dietaryRestrictions.map(encodeURIComponent).join(',');
+
+            try {
+                const response = await fetch(
+                    `/api/recipes/filter_by_ingredients?ingredients=${ingredientsQuery}&dietaryRestrictions=${restrictionsQuery}`
+                );
+
+                if (response.ok) {
+                    const data = await response.json()
+                    // Store the recipe data in a state or context that RecipePage can access
+                    // For simplicity, we'll pass it as a query parameter for now
+                    router.push(`/recipes?recipes=${encodeURIComponent(JSON.stringify(data))}`);
+                } else {
+                    console.error("Failed to feth recipes:", response.status)
+                    // Handle error (e.g., display a message to the user)
+                }
+            } catch (error) {
+                console.error("Error fetching recipes:", error)
+                // Handle error
+            }
+        } else {
+            alert("Please enter at least 1 ingredient.")
+        }
+    };
+    
     return (
         <div className="hero-section-component">
             <h1>Welcome, $Username!</h1>
@@ -70,7 +98,7 @@ export default function HeroSection() {
                                     <input
                                         type="checkbox"
                                         value="vegetarian"
-                                        checked={dietryRestrictions.includes('vegetarian')}
+                                        checked={dietaryRestrictions.includes('vegetarian')}
                                         onChange={() => handleRestrictionChange('vegetarian')}
                                     />
                                     Vegetarian
@@ -79,7 +107,7 @@ export default function HeroSection() {
                                     <input
                                         type="checkbox"
                                         value="vegan"
-                                        checked={dietryRestrictions.includes('vegan')}
+                                        checked={dietaryRestrictions.includes('vegan')}
                                         onChange={() => handleRestrictionChange('vegan')}
                                     />
                                     Vegan
@@ -101,8 +129,8 @@ export default function HeroSection() {
                     </div>
                     <div className='homepage-btns'>
                         <button className='to-image-detection-btn' onClick={goToImageDetectorPage}>Snap Ingredients 📸</button>
-                        <button className='feeling-adventurous-btn' onClick={goToRecipePage}>Feeling Adventurous?</button>
-                        <button className='generate-recipe-btn' onClick={goToRecipePage}>Generate Recipes!</button>
+                        <button className='feeling-adventurous-btn' onClick={handleRandomRecipe}>Feeling Adventurous?</button>
+                        <button className='generate-recipe-btn' onClick={handleGenerateRecipes}>Generate Recipes!</button>
                     </div>
                 </div>
             </div>
