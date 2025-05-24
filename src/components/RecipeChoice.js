@@ -2,12 +2,12 @@
 
 import '../styles/RecipePage.css';
 
-export default function RecipeChoice() {
+export default function RecipeChoice({ recipe }) {
     return (
         <div className="recipe-choice-component">
-            <h2>Let’s make: $DishName</h2>
+            <h2>Let’s make: {recipe.title}</h2>
             <div className='recipe-choice-text'>
-                <p>Placeholder text for this section</p>
+                <p>{recipe.steps}</p>
             </div>
             <div className='recipe-choice-btns'>
                 <button className='substitute-ingredient-btn'>Substitute Ingredient</button>

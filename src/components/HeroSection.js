@@ -18,7 +18,7 @@ export default function HeroSection() {
 
     const handleAddIngredient = () => {
         if (ingredient.trim() !== '') {
-            setIngredientsList([...ingredientsList, ingredient.trim()]);
+            setIngredientsList([...ingredientsList, ingredient.trim().toLowerCase()]);
             setIngredient('');
         }
     };
@@ -41,14 +41,14 @@ export default function HeroSection() {
     };
 
     const goToImageDetectorPage = () => {
-        alert("Image detection functionality not implemnted yet!")
+        alert("Image detection functionality not implemented yet!")
         // router.push('/image-detector');
     };
 
     const handleRandomRecipe = async () => { // Corrected from `async =>`
         try {
             // Make a GET request to your random recipe endpoint
-            const response = await fetch('/api/recipes/random/'); // Notice the trailing slash!
+            const response = await fetch('http://127.0.0.1:8000/api/recipes/random/'); // Notice the trailing slash!
 
             if (response.ok) {
                 const data = await response.json();
@@ -75,7 +75,7 @@ export default function HeroSection() {
 
             try {
                 const response = await fetch(
-                    `/api/recipes/filter_by_ingredients?ingredients=${ingredientsQuery}&dietaryRestrictions=${restrictionsQuery}`
+                    `http://127.0.0.1:8000/api/recipes/filter_by_ingredients?ingredients=${ingredientsQuery}&dietaryRestrictions=${restrictionsQuery}`
                 );
 
                 if (response.ok) {

@@ -3,12 +3,16 @@
 import '../styles/RecipePage.css';
 import { useRouter } from 'next/navigation';
 
-export default function RecipeCard() {
-    const router = useRouter();
-
+export default function RecipeCard({ recipe, onSelectRecipe }) {
+    
     const handleRecipeClick = () => {
-        // Navigate to a recipe detail page, passing the recipe ID or data
-        router.push(`/recipe-detail/${recipe.id}`); // Example: Using recipe ID
+        if(onSelectRecipe) {
+            onSelectRecipe(recipe);
+        }
+    }
+
+    if (!recipe) {
+        return null;
     }
 
     return (
