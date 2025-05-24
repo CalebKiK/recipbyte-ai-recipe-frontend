@@ -84,7 +84,7 @@ export default function HeroSection() {
                     // For simplicity, we'll pass it as a query parameter for now
                     router.push(`/recipes?recipes=${encodeURIComponent(JSON.stringify(data))}`);
                 } else {
-                    console.error("Failed to feth recipes:", response.status)
+                    console.error("Failed to fetch recipes:", response.status)
                     // Handle error (e.g., display a message to the user)
                 }
             } catch (error) {

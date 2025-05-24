@@ -1,13 +1,21 @@
 "use client";
 
+import { toSentenceCase, toTitleCase } from '@/utils/stringFormatters';
 import '../styles/RecipePage.css';
 
 export default function RecipeChoice({ recipe }) {
+    const displayIngredients = recipe.ingredients ? recipe.ingredients.map(ingredient => toSentenceCase(ingredient.name)).join(', ') : 'N/A'
+
     return (
         <div className="recipe-choice-component">
-            <h2>Let’s make: {recipe.title}</h2>
+            <h2>Let’s make: {toTitleCase(recipe.title)}</h2>
+            <div className='recipe-choice-ingredients'>
+                <h4>Ingredients</h4>
+                <p>{displayIngredients}</p>
+            </div>
             <div className='recipe-choice-text'>
-                <p>{recipe.steps}</p>
+                <h4>Steps</h4>
+                <p>{toSentenceCase(recipe.steps)}</p>
             </div>
             <div className='recipe-choice-btns'>
                 <button className='substitute-ingredient-btn'>Substitute Ingredient</button>

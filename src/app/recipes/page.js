@@ -51,7 +51,7 @@ export default function RecipePage() {
                 <p>No recipes found based on your ingredients, or no recipe selected yet.</p>
             )}
 
-            {recipes.length > 0 && <WhyRecipe />}
+            {/* {recipes.length > 0 && <WhyRecipe />} */}
         </div>
     )
 }
