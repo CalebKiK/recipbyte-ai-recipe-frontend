@@ -49,3 +49,19 @@
     text-align: left;
     margin: 20px 0px 10px;
 }
+
+@media (max-width: 450px) {
+
+}
+
+@media (min-width: 450px) and (max-width: 860px) {
+
+}
+
+@media (min-width: 860px) and (max-width: 1030px) {
+   
+}
+
+@media (min-width: 1090px) and (max-width: 1740px) {
+    
+}

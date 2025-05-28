@@ -128,9 +128,9 @@ export default function HeroSection() {
                             }}
                         />
                         <button className='add-ingredient-btn' onClick={handleAddIngredient}>Add</button>
-                        <button className='filters-btn' onClick={toggleFilters}>
+                        {/* <button className='filters-btn' onClick={toggleFilters}>
                             <span role="img" aria-label="filters">⚙️</span>
-                        </button>
+                        </button> */}
                         {showFilters && (
                             <div className='filters-dropdown'>
                                 <label>

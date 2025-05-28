@@ -17,9 +17,9 @@
 }
 
 .ingredients-section{
- background-color: #C9A66B;
- border-radius: 5px;
- padding: 30px 0px;
+    background-color: #C9A66B;
+    border-radius: 5px;
+    padding: 30px 0px;
 }
 
 .ingredients-input input{
@@ -132,16 +132,239 @@
     margin-top: 30px;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
+    .hero-section-component{
+        margin: 30px;
+    }
 
+    .hero-section-component h1{
+        font-size: 18px;
+    }
+
+    .hero-section-component h2{
+        font-size: 15px;
+    }
+
+    .ingredients-component{
+        padding: 30px;
+    }
+
+    .ingredients-section{
+        padding: 20px 0px;
+    }
+
+    .ingredients-input input{
+        height: 30px;
+        width: 140px;
+        font-size: 10px;
+        padding: 0px 0px 0px 5px;
+        border-radius: 5px 0px 0px 5px;
+    }
+
+    .add-ingredient-btn{
+        height: 30px;
+        width: 60px;
+        border-radius: 0px 5px 5px 0px;
+    }
+
+    .filters-btn{
+        margin-left: 20px;
+        height: 30px;
+        width: 40px;
+    }
+
+    .ingredients-list{
+        margin: 10px 10px 0px;
+    }
+
+    .ingredients-list li{
+        margin: 10px 5px;
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .ingredients-list li button{
+        margin-left: 10px;
+        padding: 1px 5px;
+    }
+
+    .homepage-btns button{
+        margin: 20px 10px 0px;
+        padding: 10px;
+        font-size: 10px;
+    }
+
+    .did-you-know-component{
+        margin: 50px 30px;
+        padding: 20px 10px;
+    }
+
+    .did-you-know-component h2{
+        font-size: 15px;
+    }
+
+    .did-you-know-component p{
+        margin-top: 15px;
+        font-size: 10px;
+    }
 }
 
-@media (min-width: 450px) and (max-width: 860px) {
+@media (min-width: 500px) and (max-width: 860px) {
+    .hero-section-component{
+        margin: 30px 60px;
+    }
 
+    .hero-section-component h1{
+        margin: 20px 0px;
+        font-size: 20px;
+    }
+
+    .hero-section-component h2{
+        margin: 20px 0px;
+        font-size: 17px;
+    }
+
+    .ingredients-component{
+        padding: 30px 50px;
+    }
+
+    .ingredients-section{
+        padding: 30px 0px;
+    }
+
+    .ingredients-input input{
+        height: 40px;
+        width: 250px;
+        font-size: 13px;
+        padding: 0px 0px 0px 5px;
+        border-radius: 5px 0px 0px 5px;
+    }
+
+    .add-ingredient-btn{
+        height: 40px;
+        width: 80px;
+        border-radius: 0px 5px 5px 0px;
+    }
+
+    .filters-btn{
+        margin-left: 20px;
+        height: 30px;
+        width: 40px;
+    }
+
+    .ingredients-list{
+        margin: 10px 20px 0px;
+    }
+
+    .ingredients-list li{
+        margin: 10px;
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .ingredients-list li button{
+        margin-left: 15px;
+        padding: 1px 10px;
+    }
+
+    .homepage-btns button{
+        margin: 20px 15px 0px;
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .did-you-know-component{
+        margin: 50px 60px;
+        padding: 20px 10px;
+    }
+
+    .did-you-know-component h2{
+        font-size: 16px;
+    }
+
+    .did-you-know-component p{
+        margin-top: 15px;
+        font-size: 13px;
+    }
 }
 
 @media (min-width: 860px) and (max-width: 1030px) {
-   
+   .hero-section-component{
+        margin: 30px 80px;
+    }
+
+    .hero-section-component h1{
+        margin: 20px 0px;
+        font-size: 22px;
+    }
+
+    .hero-section-component h2{
+        margin: 20px 0px;
+        font-size: 18px;
+    }
+
+    .ingredients-component{
+        padding: 30px 60px;
+    }
+
+    .ingredients-section{
+        padding: 30px 0px;
+    }
+
+    .ingredients-input input{
+        height: 40px;
+        width: 300px;
+        font-size: 14px;
+        padding: 0px 0px 0px 10px;
+        border-radius: 5px 0px 0px 5px;
+    }
+
+    .add-ingredient-btn{
+        height: 40px;
+        width: 80px;
+        border-radius: 0px 5px 5px 0px;
+    }
+
+    .filters-btn{
+        margin-left: 20px;
+        height: 30px;
+        width: 40px;
+    }
+
+    .ingredients-list{
+        margin: 10px 20px 0px;
+    }
+
+    .ingredients-list li{
+        margin: 10px;
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .ingredients-list li button{
+        margin-left: 15px;
+        padding: 1px 10px;
+    }
+
+    .homepage-btns button{
+        margin: 20px 15px 0px;
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .did-you-know-component{
+        margin: 50px 80px;
+        padding: 20px 10px;
+    }
+
+    .did-you-know-component h2{
+        font-size: 16px;
+    }
+
+    .did-you-know-component p{
+        margin-top: 15px;
+        font-size: 13px;
+    }
 }
 
 @media (min-width: 1090px) and (max-width: 1740px) {
