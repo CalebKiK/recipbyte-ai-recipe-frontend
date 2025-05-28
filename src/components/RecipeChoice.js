@@ -1,7 +1,7 @@
 "use client";
 
 import { toSentenceCase, toTitleCase } from '@/utils/stringFormatters';
-import '../styles/RecipePage.css';
+import '../styles/RecipeChoice.css';
 
 export default function RecipeChoice({ recipe }) {
     const displayIngredients = recipe.ingredients ? recipe.ingredients.map(ingredient => toSentenceCase(ingredient.name)).join(', ') : 'N/A'

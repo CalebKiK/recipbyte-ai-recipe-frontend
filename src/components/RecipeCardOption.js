@@ -1,6 +1,6 @@
 "use client";
 
-import '../styles/RecipePage.css';
+import '../styles/RecipeCard.css';
 import { toSentenceCase, toTitleCase } from '@/utils/stringFormatters';
 
 export default function RecipeCard({ recipe, onSelectRecipe }) {
