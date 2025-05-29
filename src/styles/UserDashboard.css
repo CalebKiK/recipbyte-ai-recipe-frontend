@@ -40,3 +40,23 @@
 .user-preferences-component h2, .user-favourites-component h2, .recipe-history-component h2{
     
 }
+
+@media (max-width:500px) {
+    
+}
+
+@media (min-width:500px) and (max-width: 860px) {
+
+}
+
+@media (min-width: 860px) and (max-width: 1030px) {
+
+}
+
+@media (min-width: 1030px) and (max-width: 1250px) {
+
+}
+
+@media (min-width: 1250px) and (max-width: 1440px) {
+
+}

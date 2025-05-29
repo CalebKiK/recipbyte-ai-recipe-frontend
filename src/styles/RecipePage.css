@@ -61,18 +61,94 @@
     padding: 20px 10px;
 }
 
-@media (max-width: 450px) {
+@media (max-width:500px) {
+    .scroll-btn {
+        display: none;
+    }
 
+    .recipe-suggestions-component{
+        margin: 30px;
+        padding: 10px;
+    }
+
+    .recipe-suggestions-component h2{
+        margin: 10px 0px 0px;
+        font-size: 20px;
+    }
+
+    .recipe-suggestions-component h4{
+        margin: 15px 0px;
+        font-size: 15px;
+    }
 }
 
-@media (min-width: 450px) and (max-width: 860px) {
+@media (min-width:500px) and (max-width: 860px) {
+    .scroll-btn {
+        width: 20px;
+        height: 20px;
+        font-size: 13px;
+    }
+    .recipe-suggestions-component{
+        margin: 40px 60px;
+        padding: 10px 5px;
+    }
 
+    .recipe-suggestions-component h2{
+        margin: 10px 0px 0px;
+        font-size: 23px;
+    }
+
+    .recipe-suggestions-component h4{
+        margin: 20px 0px;
+        font-size: 16px;
+    }
 }
 
 @media (min-width: 860px) and (max-width: 1030px) {
-   
+   .recipe-suggestions-component{
+        margin: 40px 90px;
+        padding: 10px;
+    }
+
+    .recipe-suggestions-component h2{
+        margin: 10px 0px 0px;
+        font-size: 23px;
+    }
+
+    .recipe-suggestions-component h4{
+        margin: 20px 0px;
+        font-size: 16px;
+    }
 }
 
-@media (min-width: 1090px) and (max-width: 1740px) {
-    
+@media (min-width: 1030px) and (max-width: 1250px) {
+    .recipe-suggestions-component{
+        margin: 40px 120px;
+    }
+
+    .recipe-suggestions-component h2{
+        margin: 10px 0px 0px;
+        font-size: 24px;
+    }
+
+    .recipe-suggestions-component h4{
+        margin: 20px 0px;
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 1250px) and (max-width: 1440px) {
+    .recipe-suggestions-component{
+        margin: 40px 150px;
+    }
+
+    .recipe-suggestions-component h2{
+        margin: 10px 0px 0px;
+        font-size: 24px;
+    }
+
+    .recipe-suggestions-component h4{
+        margin: 20px 0px;
+        font-size: 18px;
+    }
 }

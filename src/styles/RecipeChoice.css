@@ -5,6 +5,11 @@
     padding: 20px;
 }
 
+.recipe-choice-ingredients, .recipe-choice-text{
+    text-align: left;
+    margin: 20px 0px 10px;
+}
+
 .recipe-choice-btns button{
     margin: 30px 30px 0px;
     padding: 10px;
@@ -45,23 +50,115 @@
     transition: 0.4s ease-in;
 }
 
-.recipe-choice-ingredients, .recipe-choice-text{
-    text-align: left;
-    margin: 20px 0px 10px;
+
+@media (max-width: 500px) {
+    .recipe-choice-component{
+        margin: 30px;
+        padding: 10px;
+    }
+
+    .recipe-choice-component h2{
+        font-size: 14px;
+    }
+
+    .recipe-choice-component h4{
+        font-size: 12px;
+    }
+
+    .recipe-choice-component p{
+        font-size: 11px;
+    }
+
+    .recipe-choice-ingredients, .recipe-choice-text{
+        margin: 10px 0px 10px;
+    }
+
+    .recipe-choice-btns button{
+        margin: 20px 10px 0px;
+        padding: 10px;
+        font-size: 10px;
+    }
 }
 
-@media (max-width: 450px) {
+@media (min-width: 500px) and (max-width: 860px) {
+    .recipe-choice-component{
+        margin: 30px 60px;
+        padding: 10px;
+    }
 
-}
+    .recipe-choice-component h2{
+        font-size: 15px;
+    }
 
-@media (min-width: 450px) and (max-width: 860px) {
+    .recipe-choice-component h4{
+        font-size: 13px;
+    }
 
+    .recipe-choice-component p{
+        font-size: 12px;
+    }
+
+    .recipe-choice-ingredients, .recipe-choice-text{
+        margin: 10px 0px 10px;
+    }
+
+    .recipe-choice-btns button{
+        margin: 20px 10px 0px;
+        padding: 10px;
+        font-size: 10px;
+    }
 }
 
 @media (min-width: 860px) and (max-width: 1030px) {
-   
+   .recipe-choice-component{
+        margin: 30px 90px;
+        padding: 20px;
+    }
+
+    .recipe-choice-component h2{
+        font-size: 17px;
+    }
+
+    .recipe-choice-component h4{
+        font-size: 14px;
+    }
+
+    .recipe-choice-component p{
+        font-size: 13px;
+    }
+
+    .recipe-choice-ingredients, .recipe-choice-text{
+        margin: 15px 0px 10px;
+    }
+
+    .recipe-choice-btns button{
+        margin: 20px 10px 0px;
+        padding: 15px;
+        font-size: 12px;
+    }
 }
 
-@media (min-width: 1090px) and (max-width: 1740px) {
-    
+@media (min-width: 1030px) and (max-width: 1440px) {
+    .recipe-choice-component{
+        margin: 30px 150px;
+        padding: 20px;
+    }
+
+    .recipe-choice-component h4{
+        font-size: 16px;
+    }
+
+    .recipe-choice-component p{
+        font-size: 14px;
+    }
+
+    .recipe-choice-ingredients, .recipe-choice-text{
+        margin: 20px 0px 10px;
+    }
+
+    .recipe-choice-btns button{
+        margin: 20px 10px 0px;
+        padding: 15px;
+        font-size: 14px;
+    }
 }
