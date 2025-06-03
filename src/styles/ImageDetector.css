@@ -9,3 +9,7 @@
 .image-detector-component p{
     margin-top: 15px;
 }
+
+.removed {
+    display: none;
+}
