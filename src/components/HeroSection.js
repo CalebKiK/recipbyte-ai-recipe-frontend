@@ -41,8 +41,8 @@ export default function HeroSection() {
     };
 
     const goToImageDetectorPage = () => {
-        alert("Image detection functionality not implemented yet!")
-        // router.push('/image-detector');
+        // alert("Image detection functionality not implemented yet!")
+        router.push('/image-detector');
     };
 
     const handleRandomRecipe = async () => { // Corrected from `async =>`
