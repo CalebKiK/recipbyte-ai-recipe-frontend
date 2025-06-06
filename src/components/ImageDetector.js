@@ -8,44 +8,36 @@ export default function ImageDetector({ model }) {
     const webcamButtonRef = useRef(null);
 
     useEffect(() => {
-        const enableCam = async () => {
-            if (!model) return;
+        if (!model) return;
+        console.log("Model is ready. Webcam can be enabled.");
+    }, [model]);
 
-            const constraints = {
-                video: true,
-                audio: false,
-            };
+    const enableCam = async () => {
+        if (!model) return;
 
-            try {
-                const stream = await navigator.mediaDevices.getUserMedia(constraints);
-                if (videoRef.current) {
-                    videoRef.current.srcObject = stream;
-                    videoRef.current.addEventListener('loadeddata', () => {
-                        predictWebcam();
-                    });
+        const constraints = {
+            video: true,
+            audio: false,
+        };
+
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia(constraints);
+            if (videoRef.current) {
+                videoRef.current.srcObject = stream;
+                videoRef.current.onloadeddata = () => {
+                    predictWebcam();
+                };
+            }
+            if (webcamButtonRef.current) {
+                webcamButtonRef.current.classList.add('removed');
                 }
-                if (webcamButtonRef.current) {
-                    webcamButtonRef.current.classList.add('removed'); // Optional: hide button after enabling
-                    }
-                } catch (err) {
-                    console.error('Error accessing webcam:', err);
-                }
-            };
+            } catch (err) {
+                console.error('Error accessing webcam:', err);
+            }
+        };
 
         const getUserMediaSupported = () =>
         !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia);
-
-        if (getUserMediaSupported() && webcamButtonRef.current) {
-        webcamButtonRef.current.addEventListener('click', enableCam);
-        }
-
-        // Clean up
-        return () => {
-            if (webcamButtonRef.current) {
-                webcamButtonRef.current.removeEventListener('click', enableCam);
-            }
-        };  
-    }, [model]);
 
      // Placeholder function
     const predictWebcam = () => {
@@ -55,11 +47,23 @@ export default function ImageDetector({ model }) {
 
     
     return (
-        <div className='image-detector-component'>
-            <p>Hold some objects up close to your webcam to get a real-time classification! When ready click "enable webcam" below and accept access to the webcam when the browser asks (check the top left of your window)</p>
-            <div id="liveView" className="camView">
-                <button id="webcamButton">Enable Webcam</button>
-                <video id="webcam" autoplay muted width="640" height="480"></video>
+        <div className={`image-detector-component ${!model ? 'loading' : ''}`} >
+            <p>Hold some objects up close to your webcam to get a real-time classification! When ready click "Enable Webcam" below and accept access to the webcam when the browser asks (check the top left of your window).</p>
+            <div className="cam-view">
+                <button 
+                    ref={webcamButtonRef}
+                    className="webcam-button" 
+                    onClick={enableCam}
+                    disabled={!model}    
+                >
+                    Enable Webcam
+                </button>
+                <video 
+                    ref={videoRef}
+                    className="webcam-video" 
+                    autoPlay 
+                    muted 
+                ></video>
             </div>
         </div>
     );

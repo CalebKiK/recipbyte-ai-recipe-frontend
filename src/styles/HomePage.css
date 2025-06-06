@@ -82,14 +82,13 @@
 
 .homepage-btns button{
     margin: 30px 30px 0px;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 10px 20px;
+    border-radius: 20px;
 }
 
 .generate-recipe-btn{
     background-color: #8B4513;
     border: none;
-    border-radius: 5px;
     color: #ffffff;
 }
 
@@ -101,7 +100,6 @@
 .feeling-adventurous-btn{
     background-color: #D9D9D9; 
     border: 1px solid #8B4513;
-    border-radius: 5px
 }
 
 .feeling-adventurous-btn:hover{
@@ -112,7 +110,6 @@
 .to-image-detection-btn{
     background-color: #A9B190;
     border: none;
-    border-radius: 5px
 }
 
 .to-image-detection-btn:hover{

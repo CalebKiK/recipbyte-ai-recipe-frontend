@@ -25,16 +25,10 @@ export default function ImageDetectorPage() {
         <div className="image-detector-page">
             <Navbar />
             <h2>Image Detector Page</h2>
-
-            {!model ? (
-                <div className="image-detector-model-loading">
-                    <p>Wait for the model to load before clicking the button to enable the webcam - at which point it will become visible to use.</p>
-                </div>
-            ) : (
-                <div className="image-detector-ready">
-                    <ImageDetector model={model} />
-                </div>
-            )}
+            <div className={`image-detector-model-loading ${model ? 'removed' : ''}`}>
+                <p>Wait for the model to load before clicking the button to enable the webcam - at which point it will become visible to use.</p>
+            </div>
+            <ImageDetector model={model} />
         </div>
     );
 }

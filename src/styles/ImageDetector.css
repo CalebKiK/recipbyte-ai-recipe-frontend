@@ -1,15 +1,52 @@
 .image-detector-page{
-    margin: 20px 300px;
+    margin: 0px 300px;
+}
+
+.image-detector-page h2{
+    margin: 20px;
+}
+
+.image-detector-model-loading{
+    margin: 20px;
+    text-align: left;
 }
 
 .image-detector-component{
     margin: 20px;
+    text-align: left;
+}
+
+.image-detector-component.loading{
+    opacity: 0.2;
+    pointer-events: none;
 }
 
 .image-detector-component p{
     margin-top: 15px;
+    line-height: 25px;
 }
 
 .removed {
     display: none;
+}
+
+.webcam-button{
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #8B4513;
+    border: none;
+    color: #ffffff;
+    margin-top: 30px;
+}
+
+.webcam-button:hover{
+    background-color: #b35c1f;
+    transition: 0.4s ease-in;
+}
+
+.webcam-video{
+    margin-top: 20px;
+    border-radius: 5px;
+    width: 860px;
+    height: 500px;
 }
