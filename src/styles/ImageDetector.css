@@ -14,10 +14,18 @@
 .image-detector-component{
     margin: 20px;
     text-align: left;
+    position: relative;
+    display: flex; /* Helps with layout */
+    flex-direction: column;
+    align-items: center; /* Center content */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 900px; /* Adjust as needed */
+    margin: 20px auto; 
 }
 
 .image-detector-component.loading{
-    opacity: 0.2;
+    opacity: 0.4;
     pointer-events: none;
 }
 
@@ -44,9 +52,85 @@
     transition: 0.4s ease-in;
 }
 
-.webcam-video{
-    margin-top: 20px;
+.cam-view {
+    position: relative; /* THIS IS CRUCIAL: All absolute overlays will be positioned relative to this div */
+    width: 100%; /* Make it take available width */
+    max-width: 860px; /* Match your desired video width */
+    height: auto; /* Allow height to adjust to content */
+    overflow: hidden; /* Ensures overlays don't bleed out if calculations are slightly off */
+    margin-bottom: 20px; /* Space below the cam view */
     border-radius: 5px;
-    width: 860px;
-    height: 500px;
+}
+
+.webcam-video{
+    width: 100%; /* Make video fill its parent .cam-view */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+}
+
+.highlighter {
+  background: rgba(0, 255, 0, 0.25);
+  border: 1px dashed #fff;
+  z-index: 1;
+  position: absolute;
+}
+
+.prediction-label.prediction-label {
+    background-color: rgba(0, 0, 0, 0.5); /* Slightly darker for better contrast */
+    color: white;
+    width: 100%;
+    padding: 3px 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    border-radius: 3px;
+    white-space: nowrap;
+    z-index: 11; /* Ensure label is above highlighter */
+    cursor: pointer; /* Indicate it's clickable for adding ingredients */
+    transition: background-color 0.2s ease;
+}
+
+.prediction-label:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.instruction-text {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.selected-ingredients-section {
+    width: 100%;
+    max-width: 640px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-top: 20px;
+}
+
+.selected-ingredients-section h3 {
+    color: #333;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.selected-ingredients-list {
+    list-style-type: none;
+    padding: 0;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.selected-ingredients-list li {
+    background-color: #e9ecef;
+    padding: 8px 12px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
 }
