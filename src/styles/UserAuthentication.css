@@ -1,0 +1,59 @@
+.user-authentication-component{
+    margin: 50px 400px;
+    background-color: #C9A66B;
+    border-radius: 10px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    padding: 30px 100px;
+}
+
+.user-authentication-component h2{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.user-authentication-component form{
+    display: flex;
+    flex-direction: column;
+}
+
+.user-authentication-component input{
+    margin: 15px 0px;
+    height: 45px;
+    padding-left: 15px;
+    border-radius: 10px;
+    border: 1px solid rgb(98, 98, 98);
+}
+
+.user-authentication-button{
+    padding: 10px 20px;
+    margin-top: 20px;
+    height: 45px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: #8B4513;
+    border: none;
+    color: #ffffff;
+}
+
+.user-authentication-button:hover{
+    background-color: #a05017;
+    transition: 0.4s ease-in;
+}
+
+.dont-have-account-button{
+    padding: 10px 20px;
+    margin-top: 30px;
+    font-size: 14px;
+    border-radius: 10px;
+    background-color: #D9D9D9; 
+    border: 1px solid #8B4513;
+}
+
+.dont-have-account-button:hover{
+    background-color: #FAF1E6;
+    transition: 0.4s ease-in;
+}

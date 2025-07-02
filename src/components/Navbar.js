@@ -2,8 +2,11 @@
 
 import '../styles/Navbar.css';
 import Link from 'next/link';
+import { useAuth } from '@/context/AuthContext';
 
 export default function Navbar() {
+    const { token, logout } = useAuth();
+
     return (
         <div className="navbar">
             <div className='navbar-logo'>
@@ -13,7 +16,18 @@ export default function Navbar() {
             <div className='navbar-links'>
                 <Link href="/homepage">Home</Link>
                 {/* <Link href="/recipes">Recipes</Link> */}
-                <Link href="/dashboard">Dashboard</Link>
+
+                {token && (
+                    <Link href="/dashboard">Dashboard</Link>
+                )}
+
+                {/* <Link href="/dashboard">Dashboard</Link> */}
+                
+                {!token ? (
+                    <Link href="/auth">Login / Signup</Link>
+                ) : (
+                    <button onClick={logout}>Logout</button>
+                )}
             </div>
         </div>
     );
