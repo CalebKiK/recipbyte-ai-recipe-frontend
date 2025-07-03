@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { useAuth } from '@/context/AuthContext';
 import '../styles/HomePage.css';
 
 export default function HeroSection() {
@@ -9,6 +10,7 @@ export default function HeroSection() {
     const [ingredient, setIngredient] = useState('');
     const [ingredientsList, setIngredientsList] = useState([]);
     const [showFilters, setShowFilters] = useState(false);
+    const { user } = useAuth();
     const [dietaryRestrictions, setDietaryRestrictions] = useState([]);
     const router = useRouter();
 
@@ -112,7 +114,7 @@ export default function HeroSection() {
     
     return (
         <div className="hero-section-component">
-            <h1>Welcome, $Username!</h1>
+            <h1>Welcome{user?.username ? `, ${user.username}` : ''}!</h1>
             <h2>Let's turn your ingredients into culinary magic.</h2>
             <div className="ingredients-component">
                 <div className="ingredients-section">
