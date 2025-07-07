@@ -8,12 +8,6 @@ import RecipeHistory from './RecipeHistory';
 
 export default function UserDashboard() {
     const [selectedSection, setSelectedSection] = useState('preferences');
-    const [showModal, setShowModal] = useState(false);
-
-  const handleLogout = () => {
-    console.log("User logged out!"); 
-    setShowModal(false);
-  };
 
   const renderSection = () => {
     switch (selectedSection) {
@@ -36,8 +30,6 @@ export default function UserDashboard() {
                     <button onClick={() => setSelectedSection('preferences')}>Preferences</button>
                     <button onClick={() => setSelectedSection('favourites')}>Recipe Favourites</button>
                     <button onClick={() => setSelectedSection('history')}>Recipe History</button>
-                    <button onClick={() => setShowModal(true)}>Logout</button>
-                    {showModal && <LogoutModal onClose={() => setShowModal(false)} onLogout={handleLogout} />}
                 </div>
                 <div className='selected-dashboard-link'>
                     {renderSection()}

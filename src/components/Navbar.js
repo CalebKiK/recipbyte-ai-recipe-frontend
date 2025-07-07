@@ -3,9 +3,16 @@
 import '../styles/Navbar.css';
 import Link from 'next/link';
 import { useAuth } from '@/context/AuthContext';
+import { useRouter } from "next/navigation";
 
 export default function Navbar() {
     const { token, logout } = useAuth();
+    const router = useRouter();
+
+    const handleLogout = () => {
+        logout();
+        router.push("/");
+    };
 
     return (
         <div className="navbar">
@@ -24,7 +31,7 @@ export default function Navbar() {
                 {!token ? (
                     <Link href="/auth">Login / Signup</Link>
                 ) : (
-                    <button onClick={logout}>Logout</button>
+                    <button onClick={handleLogout}>Logout</button>
                 )}
             </div>
         </div>

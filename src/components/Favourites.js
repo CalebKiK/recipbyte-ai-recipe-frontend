@@ -17,7 +17,8 @@ export default function Favourites() {
                 const response = await axios.get('http://127.0.0.1:8000/api/users/profile/', {
                     headers: { Authorization: `Bearer ${token}` },
                 });
-                setFavorites(response.data.favorite_recipes || []);
+                console.log("Fetched profile response:", response.data);
+                setFavorites(response.data[0]?.favorite_recipes || []);
             } catch (error) {
                 setMessage('Failed to load favorites.');
             }
@@ -30,12 +31,29 @@ export default function Favourites() {
             const res = await axios.put(`http://127.0.0.1:8000/api/users/favorites/${id}/toggle/`, {}, {
                 headers: { Authorization: `Bearer ${token}` },
             });
-            setFavorites(prev => prev.filter(r => r.id !== id));
             setMessage(res.data.message);
+
+            // Refetch updated favorites
+            const updatedRes = await axios.get('http://127.0.0.1:8000/api/users/profile/', {
+                headers: { Authorization: `Bearer ${token}` },
+            });
+            setFavorites(updatedRes.data.favorite_recipes || []);
         } catch (err) {
             setMessage('Failed to remove from favorites.');
         }
     };
+
+    // const handleRemove = async (id) => {
+    //     try {
+    //         const res = await axios.put(`http://127.0.0.1:8000/api/users/favorites/${id}/toggle/`, {}, {
+    //             headers: { Authorization: `Bearer ${token}` },
+    //         });
+    //         setFavorites(prev => prev.filter(r => r.id !== id));
+    //         setMessage(res.data.message);
+    //     } catch (err) {
+    //         setMessage('Failed to remove from favorites.');
+    //     }
+    // };
 
     return (
         <div className="user-favourites-component">
