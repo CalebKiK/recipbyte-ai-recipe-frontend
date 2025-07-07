@@ -26,7 +26,9 @@ export default function AuthPage() {
                     username: formData.username,
                     password: formData.password
                 });
-                login(res.data.token);
+                console.log("Login response in auth/page.js:", res.data);
+                login(res.data.access);
+                localStorage.setItem("refreshToken", res.data.refresh);
                 router.push("/homepage");
             } else {
                 await axios.post("http://127.0.0.1:8000/api/users/register/", formData);

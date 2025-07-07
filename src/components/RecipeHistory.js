@@ -14,6 +14,7 @@ export default function RecipeHistory() {
     useEffect(() => {
         async function fetchHistory() {
             try {
+                console.log("Auth token in RecipeHistory.js file:", token);
                 const response = await axios.get('http://127.0.0.1:8000/api/users/history/', {
                     headers: { Authorization: `Bearer ${token}` },
                 });

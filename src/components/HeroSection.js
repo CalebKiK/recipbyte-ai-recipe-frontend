@@ -11,6 +11,7 @@ export default function HeroSection() {
     const [ingredientsList, setIngredientsList] = useState([]);
     const [showFilters, setShowFilters] = useState(false);
     const { user } = useAuth();
+    console.log("User object from AuthContext in HeroSection.js file:", user);
     const [dietaryRestrictions, setDietaryRestrictions] = useState([]);
     const router = useRouter();
 
