@@ -9,9 +9,9 @@ export default function Navbar() {
     const { token, logout } = useAuth();
     const router = useRouter();
 
-    const handleLogout = () => {
-        logout();
-        router.push("/");
+    const handleLogout = async () => {
+        await logout();
+        router.push("/homepage");
     };
 
     return (

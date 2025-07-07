@@ -10,6 +10,7 @@ export default function RecipeHistory() {
     const { token } = useAuth();
     const [history, setHistory] = useState([]);
     const [message, setMessage] = useState('');
+    const [expandedId, setExpandedId] = useState(null);
 
     useEffect(() => {
         async function fetchHistory() {
@@ -25,6 +26,10 @@ export default function RecipeHistory() {
         fetchHistory();
     }, [token]);
 
+    const handleCardClick = (recipeId) => {
+        setExpandedId(prev => prev === recipeId ? null : recipeId);
+    };
+
     return (
         <div className="recipe-history-component">
             <h2>Recipe History</h2>
@@ -35,6 +40,8 @@ export default function RecipeHistory() {
                     <RecipeItem
                         key={recipe.id}
                         recipe={recipe}
+                        isExpanded={expandedId===recipe.id}
+                        onClick={() => handleCardClick(recipe.id)}
                         showRemove={false}
                     />
                 ))

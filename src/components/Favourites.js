@@ -10,6 +10,7 @@ export default function Favourites() {
     const { token } = useAuth();
     const [favorites, setFavorites] = useState([]);
     const [message, setMessage] = useState('');
+    const [expandedId, setExpandedId] = useState(null);
 
     useEffect(() => {
         async function fetchFavorites() {
@@ -55,6 +56,10 @@ export default function Favourites() {
     //     }
     // };
 
+    const handleCardClick = (recipeId) => {
+        setExpandedId(prev => prev === recipeId ? null : recipeId);
+    };
+
     return (
         <div className="user-favourites-component">
             <h2>Recipe Favourites</h2>
@@ -65,6 +70,8 @@ export default function Favourites() {
                     <RecipeItem
                         key={recipe.id}
                         recipe={recipe}
+                        isExpanded={expandedId === recipe.id}
+                        onClick={() => handleCardClick(recipe.id)}
                         onRemove={() => handleRemove(recipe.id)}
                     />
                 ))
