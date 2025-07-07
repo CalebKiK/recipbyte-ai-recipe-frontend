@@ -5,6 +5,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useAuth } from '@/context/AuthContext';
 import RecipeItem from './RecipeItem';
+import toast from 'react-hot-toast';
 
 export default function Favourites() {
     const { token } = useAuth();
@@ -18,10 +19,10 @@ export default function Favourites() {
                 const response = await axios.get('http://127.0.0.1:8000/api/users/profile/', {
                     headers: { Authorization: `Bearer ${token}` },
                 });
-                console.log("Fetched profile response:", response.data);
+                // console.log("Fetched profile response:", response.data);
                 setFavorites(response.data[0]?.favorite_recipes || []);
             } catch (error) {
-                setMessage('Failed to load favorites.');
+                toast.error('Failed to load favorites.');
             }
         }
         fetchFavorites();
@@ -32,7 +33,7 @@ export default function Favourites() {
             const res = await axios.put(`http://127.0.0.1:8000/api/users/favorites/${id}/toggle/`, {}, {
                 headers: { Authorization: `Bearer ${token}` },
             });
-            setMessage(res.data.message);
+            toast.success(res.data.message);
 
             // Refetch updated favorites
             const updatedRes = await axios.get('http://127.0.0.1:8000/api/users/profile/', {
@@ -40,7 +41,7 @@ export default function Favourites() {
             });
             setFavorites(updatedRes.data.favorite_recipes || []);
         } catch (err) {
-            setMessage('Failed to remove from favorites.');
+            toast.error('Failed to remove from favorites.');
         }
     };
 
@@ -76,7 +77,7 @@ export default function Favourites() {
                     />
                 ))
             )}
-            {message && <p className='message'>{message}</p>}
+            {/* {message && <p className='message'>{message}</p>} */}
         </div>
     );
 }

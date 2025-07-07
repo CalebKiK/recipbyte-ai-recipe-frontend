@@ -4,6 +4,7 @@ import '../styles/Navbar.css';
 import Link from 'next/link';
 import { useAuth } from '@/context/AuthContext';
 import { useRouter } from "next/navigation";
+import toast from 'react-hot-toast';
 
 export default function Navbar() {
     const { token, logout } = useAuth();
@@ -12,13 +13,14 @@ export default function Navbar() {
     const handleLogout = async () => {
         await logout();
         router.push("/homepage");
+        toast.success("Logged out successfully!");
     };
 
     return (
         <div className="navbar">
             <div className='navbar-logo'>
-                <img src='/images/logo_option_3.png' alt='bytebistro-logo'/>
-                <h3>BYTEBISTRO</h3>
+                <img src='/images/logo_option_3.png' alt='recipebyte-logo'/>
+                <h3>RECIPEBYTE</h3>
             </div>
             <div className='navbar-links'>
                 <Link href="/homepage">Home</Link>

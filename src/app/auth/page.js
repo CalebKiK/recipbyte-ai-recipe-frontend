@@ -5,6 +5,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
 import "@/styles/UserAuthentication.css";
+import toast from "react-hot-toast";
 
 export default function AuthPage() {
     const [isLogin, setIsLogin] = useState(true);
@@ -29,9 +30,11 @@ export default function AuthPage() {
                 console.log("Login response in auth/page.js:", res.data);
                 login(res.data.access);
                 localStorage.setItem("refreshToken", res.data.refresh);
+                toast.success(`Welcome back, ${formData.username}!`);
                 router.push("/homepage");
             } else {
                 await axios.post("http://127.0.0.1:8000/api/users/register/", formData);
+                toast.success("Account created successfully!")
                 setIsLogin(true);
             }
         } catch (err) {

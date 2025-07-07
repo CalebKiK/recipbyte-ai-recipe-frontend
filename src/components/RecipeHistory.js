@@ -5,6 +5,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useAuth } from '@/context/AuthContext';
 import RecipeItem from './RecipeItem';
+import toast from 'react-hot-toast';
 
 export default function RecipeHistory() {
     const { token } = useAuth();
@@ -20,7 +21,7 @@ export default function RecipeHistory() {
                 });
                 setHistory(response.data || []);
             } catch (error) {
-                setMessage('Failed to load history.');
+                toast.error('Failed to load history.');
             }
         }
         fetchHistory();

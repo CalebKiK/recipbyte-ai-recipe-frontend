@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import '../styles/HomePage.css';
+import toast from 'react-hot-toast';
 
 export default function HeroSection() {
 
@@ -54,15 +55,15 @@ export default function HeroSection() {
                 const data = await response.json();
                 router.push(`/recipes?random=true`);
             } else if (response.status === 404) {
-                alert("No recipes found in the database. Please import some recipes first!");
+                toast.error("No recipes found in the database. Please import some recipes first!");
             }
             else {
                 console.error("Failed to fetch random recipe:", response.status);
-                alert("Failed to fetch a random recipe. Please try again.");
+                toast.error("Failed to fetch a random recipe. Please try again.");
             }
         } catch (error) {
             console.error("Error fetching random recipe:", error);
-            alert("An error occurred while fetching a random recipe. Check console for details.");
+            toast.error("An error occurred while fetching a random recipe. Check console for details.");
         }
     };
 
@@ -80,7 +81,7 @@ export default function HeroSection() {
             router.push(url);
 
         } else {
-            alert("Please enter at least 1 ingredient.")
+            toast.error("Please enter at least 1 ingredient.")
         }
     };
     

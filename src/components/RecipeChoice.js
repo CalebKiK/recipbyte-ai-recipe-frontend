@@ -5,6 +5,7 @@ import '../styles/RecipeChoice.css';
 import { useAuth } from '@/context/AuthContext';
 import axios from 'axios';
 import { useState } from 'react';
+import toast from 'react-hot-toast';
 
 export default function RecipeChoice({ recipe }) {
     const { token } = useAuth();
@@ -21,9 +22,9 @@ export default function RecipeChoice({ recipe }) {
                 {},
                 { headers: { Authorization: `Bearer ${token}` } }
             );
-            setMessage(response.data.message);
+            toast.success(response.data.message);
         } catch (error) {
-            setMessage('Error adding to favorites. Please try again.');
+            toast.error('Error adding to favorites. Please try again.');
         }
     };
 
@@ -41,11 +42,12 @@ export default function RecipeChoice({ recipe }) {
 
     const handleLike = async () => {
         if (!token) {
-            setMessage('Please log in to add to favorites.');
+            toast.error('Please log in to add to favorites.');
             return;
         }
         await addToFavorites();
         await addToHistory();
+        toast.success("Recipe added to favourites!");
     };
 
     return (
@@ -64,7 +66,7 @@ export default function RecipeChoice({ recipe }) {
                 <button className='like-recipe-btn' onClick={handleLike}>Like (Thumbs Up)</button>
                 <button className='dislike-recipe-btn'>Not Like (Thumbs Down)</button>
             </div>
-            {message && <div className='message'>{message}</div>}
+            {/* {message && <div className='message'>{message}</div>} */}
         </div>
     );
 }

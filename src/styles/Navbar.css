@@ -36,7 +36,15 @@
     font-weight: 600;
 }
 
-.navbar-links a:hover{
+.navbar-links button{
+    font-weight: 600;
+    background-color: #FAF1E6;
+    border: none;
+    font-size: 15px;
+    margin-left: 30px;
+}
+
+.navbar-links a:hover, .navbar-links button:hover{
     color: #8B4513;
     transition: 0.5s ease-in;
 }
@@ -59,11 +67,12 @@
         margin-left: 30px;
     }
 
-    .navbar-links a{
+    .navbar-links a, .navbar-links button{
         margin: 0px 15px;
         font-size: 14px;
         text-decoration: underline;
     }
+
 }
 
 @media (min-width: 500px) and (max-width: 860px) {
@@ -84,7 +93,7 @@
         margin-left: 80px;
     }
 
-    .navbar-links a{
+    .navbar-links a, .navbar-links button{
         margin: 0px 25px;
         font-size: 15px;
         text-decoration: underline;
