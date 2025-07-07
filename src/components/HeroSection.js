@@ -44,20 +44,15 @@ export default function HeroSection() {
     };
 
     const goToImageDetectorPage = () => {
-        // alert("Image detection functionality not implemented yet!")
         router.push('/image-detector');
     };
 
-    const handleRandomRecipe = async () => { // Corrected from `async =>`
+    const handleRandomRecipe = async () => { 
         try {
-            // Make a GET request to your random recipe endpoint
-            const response = await fetch('http://127.0.0.1:8000/api/recipes/random/'); // Notice the trailing slash!
+            const response = await fetch('http://127.0.0.1:8000/api/recipes/random/'); 
 
             if (response.ok) {
                 const data = await response.json();
-                // Since it's a single random recipe, wrap it in an array for consistency
-                // with how handleGenerateRecipes sends data to the recipes page
-                // router.push(`/recipes?recipes=${encodeURIComponent(JSON.stringify([data]))}`);
                 router.push(`/recipes?random=true`);
             } else if (response.status === 404) {
                 alert("No recipes found in the database. Please import some recipes first!");
@@ -77,36 +72,13 @@ export default function HeroSection() {
             const ingredientsQuery = ingredientsList.map(encodeURIComponent).join(',');
             const restrictionsQuery = dietaryRestrictions.map(encodeURIComponent).join(',');
 
-            // try {
-            //     const response = await fetch(
-            //         `http://127.0.0.1:8000/api/recipes/filter_by_ingredients?ingredients=${ingredientsQuery}&dietaryRestrictions=${restrictionsQuery}`
-            //     );
-
-            //     if (response.ok) {
-            //         const data = await response.json()
-            //         // Store the recipe data in a state or context that RecipePage can access
-            //         // For simplicity, we'll pass it as a query parameter for now
-            //         router.push(`/recipes?recipes=${encodeURIComponent(JSON.stringify(data))}`);
-            //     } else {
-            //         console.error("Failed to fetch recipes:", response.status)
-            //         // Handle error (e.g., display a message to the user)
-            //     }
-            // } catch (error) {
-            //     console.error("Error fetching recipes:", error)
-            //     // Handle error
-            // }
-
-            // --- MODIFICATION HERE ---
-            // Construct the URL with only query parameters for filtering
-            // The RecipePage will then use these parameters to fetch the data
+            
             let url = `/recipes?ingredients=${ingredientsQuery}`;
             if (restrictionsQuery) {
                 url += `&dietaryRestrictions=${restrictionsQuery}`;
             }
 
-            // Navigate to the recipes page without passing the large JSON data
             router.push(url);
-            // --- END OF MODIFICATION ---
 
         } else {
             alert("Please enter at least 1 ingredient.")

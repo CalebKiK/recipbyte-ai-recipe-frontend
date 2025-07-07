@@ -20,8 +20,6 @@ export default function Navbar() {
                 {token && (
                     <Link href="/dashboard">Dashboard</Link>
                 )}
-
-                {/* <Link href="/dashboard">Dashboard</Link> */}
                 
                 {!token ? (
                     <Link href="/auth">Login / Signup</Link>

@@ -11,7 +11,7 @@ export default function UserDashboard() {
     const [showModal, setShowModal] = useState(false);
 
   const handleLogout = () => {
-    console.log("User logged out!"); // Replace with actual logout logic
+    console.log("User logged out!"); 
     setShowModal(false);
   };
 

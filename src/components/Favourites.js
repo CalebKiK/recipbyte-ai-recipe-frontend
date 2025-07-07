@@ -14,7 +14,6 @@ export default function Favourites() {
     useEffect(() => {
         async function fetchFavorites() {
             try {
-                console.log("Auth token in Favourites.js file:", token);
                 const response = await axios.get('http://127.0.0.1:8000/api/users/profile/', {
                     headers: { Authorization: `Bearer ${token}` },
                 });

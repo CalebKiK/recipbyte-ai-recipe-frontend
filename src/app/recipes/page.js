@@ -12,32 +12,14 @@ export default function RecipePage() {
     const recipesData = searchParams.get('recipes');
     const [recipes, setRecipes] = useState([]);
     const [selectedRecipe, setSelectedRecipe] = useState(null);
-    const [loading, setLoading] = useState(true); // New loading state
-    const [error, setError] = useState(null);     // New error state
+    const [loading, setLoading] = useState(true); 
+    const [error, setError] = useState(null); 
 
-    // useEffect(() => {
-    //     if (recipesData) {
-    //         try {
-    //             const parsedRecipes = JSON.parse(decodeURIComponent(recipesData));
-    //             setRecipes(parsedRecipes);
-
-    //             if (parsedRecipes.length === 1) {
-    //                 setSelectedRecipe(parsedRecipes[0]);
-    //             } else {
-    //                 setSelectedRecipe(null);
-    //             }
-    //         } catch (error) {
-    //             console.error("Error parsing recipes data:", error);
-    //             setRecipes([]);
-    //             setSelectedRecipe(null);
-    //         }
-    //     }
-    // }, [recipesData]);
 
     useEffect(() => {
         const fetchRecipes = async () => {
             setLoading(true);
-            setError(null); // Clear previous errors
+            setError(null); 
 
             const ingredients = searchParams.get('ingredients');
             const dietaryRestrictions = searchParams.get('dietaryRestrictions');
@@ -83,14 +65,14 @@ export default function RecipePage() {
                 } else {
                     const errorData = await response.json();
                     setError(errorData.error || `Failed to fetch recipes: ${response.status}`);
-                    setRecipes([]); // Clear recipes on error
-                    setSelectedRecipe(null); // Clear selected recipe on error
+                    setRecipes([]); 
+                    setSelectedRecipe(null);
                 }
             } catch (err) {
                 console.error("Error fetching recipes:", err);
                 setError("An error occurred while fetching recipes. Please check your network connection or the backend server.");
-                setRecipes([]); // Clear recipes on error
-                setSelectedRecipe(null); // Clear selected recipe on error
+                setRecipes([]); 
+                setSelectedRecipe(null); 
             } finally {
                 setLoading(false);
             }
@@ -111,19 +93,14 @@ export default function RecipePage() {
 
             {!loading && !error && recipes.length > 0 && (
                 <>
-                    {/* Display suggestions if there are multiple recipes or if a single one isn't yet selected */}
                     {recipes.length > 1 && (
                          <RecipeSuggestions recipes={recipes} onSelectRecipe={handleSelectRecipe} />
                     )}
 
-                    {/* Always display RecipeChoice if a recipe is selected */}
                     {selectedRecipe && (
                         <RecipeChoice recipe={selectedRecipe} />
                     )}
 
-                    {/* If only one recipe was returned initially, and it's not yet selected,
-                        or if no recipe was selected from multiple, show a message.
-                        This condition might need fine-tuning based on desired UX. */}
                     {recipes.length === 1 && !selectedRecipe && (
                         <p>No recipe selected from the single result.</p>
                     )}
@@ -133,17 +110,6 @@ export default function RecipePage() {
             {!loading && !error && recipes.length === 0 && !selectedRecipe && (
                 <p>No recipes found based on your criteria.</p>
             )}
-            {/* {recipes.length > 0 && ( // Display suggestions if there are any recipes
-                <RecipeSuggestions recipes={recipes} onSelectRecipe={handleSelectRecipe} /> // <-- PASS THE NEW FUNCTION
-            )}
-
-            {selectedRecipe && ( // Only render RecipeChoice if a recipe is selected
-                <RecipeChoice recipe={selectedRecipe} />
-            )}
-
-            {!recipes.length && !selectedRecipe && ( // Message if no recipes and none selected
-                <p>No recipes found based on your ingredients, or no recipe selected yet.</p>
-            )} */}
 
             {/* {recipes.length > 0 && <WhyRecipe />} */}
         </div>
