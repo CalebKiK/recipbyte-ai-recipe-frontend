@@ -1,0 +1,186 @@
+[
+  {
+    "coco_label": "apple",
+    "canonical_name": "apple"
+  },
+  {
+    "coco_label": "banana",
+    "canonical_name": "banana"
+  },
+  {
+    "coco_label": "orange",
+    "canonical_name": "orange"
+  },
+  {
+    "coco_label": "grape",
+    "canonical_name": "grape"
+  },
+  {
+    "coco_label": "strawberry",
+    "canonical_name": "strawberry"
+  },
+  {
+    "coco_label": "lemon",
+    "canonical_name": "lemon"
+  },
+  {
+    "coco_label": "lime",
+    "canonical_name": "lime"
+  },
+  {
+    "coco_label": "kiwi",
+    "canonical_name": "kiwi"
+  },
+  {
+    "coco_label": "carrot",
+    "canonical_name": "carrot"
+  },
+  {
+    "coco_label": "potato",
+    "canonical_name": "potato"
+  },
+  {
+    "coco_label": "onion",
+    "canonical_name": "onion"
+  },
+  {
+    "coco_label": "garlic",
+    "canonical_name": "garlic"
+  },
+  {
+    "coco_label": "broccoli",
+    "canonical_name": "broccoli"
+  },
+  {
+    "coco_label": "tomato",
+    "canonical_name": "tomato"
+  },
+  {
+    "coco_label": "cucumber",
+    "canonical_name": "cucumber"
+  },
+  {
+    "coco_label": "zucchini",
+    "canonical_name": "zucchini"
+  },
+  {
+    "coco_label": "bell pepper",
+    "canonical_name": "bell pepper"
+  },
+  {
+    "coco_label": "mushroom",
+    "canonical_name": "mushroom"
+  },
+  {
+    "coco_label": "spinach",
+    "canonical_name": "spinach"
+  },
+  {
+    "coco_label": "corn",
+    "canonical_name": "corn"
+  },
+  {
+    "coco_label": "lettuce",
+    "canonical_name": "lettuce"
+  },
+  {
+    "coco_label": "cabbage",
+    "canonical_name": "cabbage"
+  },
+  {
+    "coco_label": "celery",
+    "canonical_name": "celery"
+  },
+  {
+    "coco_label": "chicken",
+    "canonical_name": "chicken"
+  },
+  {
+    "coco_label": "beef",
+    "canonical_name": "beef"
+  },
+  {
+    "coco_label": "pork",
+    "canonical_name": "pork"
+  },
+  {
+    "coco_label": "fish",
+    "canonical_name": "fish"
+  },
+  {
+    "coco_label": "shrimp",
+    "canonical_name": "shrimp"
+  },
+  {
+    "coco_label": "egg",
+    "canonical_name": "egg"
+  },
+  {
+    "coco_label": "sausage",
+    "canonical_name": "sausage"
+  },
+  {
+    "coco_label": "bacon",
+    "canonical_name": "bacon"
+  },
+  {
+    "coco_label": "bread",
+    "canonical_name": "bread"
+  },
+  {
+    "coco_label": "rice",
+    "canonical_name": "rice"
+  },
+  {
+    "coco_label": "pasta",
+    "canonical_name": "pasta"
+  },
+  {
+    "coco_label": "noodles",
+    "canonical_name": "noodles"
+  },
+  {
+    "coco_label": "flour",
+    "canonical_name": "flour"
+  },
+  {
+    "coco_label": "sugar",
+    "canonical_name": "sugar"
+  },
+  {
+    "coco_label": "salt",
+    "canonical_name": "salt"
+  },
+  {
+    "coco_label": "pepper",
+    "canonical_name": "pepper"
+  },
+  {
+    "coco_label": "oil",
+    "canonical_name": "oil"
+  },
+  {
+    "coco_label": "butter",
+    "canonical_name": "butter"
+  },
+  {
+    "coco_label": "cheese",
+    "canonical_name": "cheese"
+  },
+  {
+    "coco_label": "milk",
+    "canonical_name": "milk"
+  },
+  {
+    "coco_label": "yogurt",
+    "canonical_name": "yogurt"
+  },
+  {
+    "coco_label": "cream",
+    "canonical_name": "cream"
+  },
+  {
+    "coco_label": "water bottle",
+    "canonical_name": "water"
+  }
+]
