@@ -2,7 +2,7 @@
 
 import Navbar from "@/components/Navbar";
 import IngredientDetector from "@/components/IngredientDetector";
-import '../../styles/ImageDetector.css';
+import '../../styles/IngredientDetector.css';
 import { useEffect, useState } from 'react';
 import * as cocoSsd from "@tensorflow-models/coco-ssd";
 import * as tf from "@tensorflow/tfjs";
@@ -44,21 +44,24 @@ export default function ImageDetectorPage() {
         <div className="image-detector-page">
             <Navbar />
             <h2>Ingredient Detector Page</h2>
-            {loadingModel ? (
+            {/* {loadingModel ? (
                 <div className='image-detector-model-loading'>
-                    <p>
-                        <span>Preparing our AI Chef!</span> 🍳 <br />
+                    <h3>Preparing our AI Chef! 🍳</h3>
+                    <p>  
                         We're loading the intelligent model that identifies your ingredients. This may take a few moments depending on your connection. Thanks for your patience!
                     </p>
                 </div>
             ) : (
                 <IngredientDetector model={model} onIngredientsDetected={handleIngredientsDetected} />
-            )}
+            )} */}
 
-            {/* <div className={`image-detector-model-loading ${model ? 'removed' : ''}`}>
-                <p>Wait for the model to load before clicking the button to enable the webcam - at which point it will become visible to use.</p>
+            <div className={`image-detector-model-loading ${model ? 'removed' : ''}`}>
+                <h3>Preparing our AI Chef! 🍳</h3>
+                <p>  
+                    We're loading the intelligent model that identifies your ingredients. This may take a few moments depending on your connection. Thanks for your patience!
+                </p>
             </div>
-            <ImageDetector model={model} /> */}
+            <IngredientDetector model={model} onIngredientsDetected={handleIngredientsDetected} />
         </div>
     );
 }

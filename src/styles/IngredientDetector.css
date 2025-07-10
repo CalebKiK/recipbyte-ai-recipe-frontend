@@ -1,0 +1,297 @@
+.image-detector-page{
+    margin: 0px 300px;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-detector-page h2{
+    margin: 20px 0px 0px;
+}
+
+.image-detector-model-loading{
+    text-align: left;
+}
+
+.image-detector-model-loading h3{
+    margin-bottom: 5px;
+}
+
+.image-detector-model-loading p{
+    line-height: 23px;
+}
+
+.ingredient-detector-component{
+    text-align: left;
+    position: relative;
+    display: flex; /* Helps with layout */
+    flex-direction: column;
+    align-items: center; /* Center content */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 900px; /* Adjust as needed */
+    /* margin: 20px auto;  */
+    margin: 10px 0px;
+}
+
+.ingredient-detector-component.loading{
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.instruction-message{
+    margin-top: 15px;
+    line-height: 25px;
+    text-align: left;
+}
+
+.removed {
+    display: none;
+}
+
+.input-options {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.button-label, .action-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-label, .action-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-label:hover, .action-button:hover {
+    background-color: #45a049;
+}
+
+.button-label:hover, .action-button:hover {
+    background-color: #45a049;
+}
+
+.action-button.secondary {
+    background-color: #f44336;
+}
+.action-button.secondary:hover {
+    background-color: #da190b;
+}
+
+.action-button.capture-button {
+    background-color: #007bff;
+    margin-top: 10px;
+}
+.action-button.capture-button:hover {
+    background-color: #0056b3;
+}
+
+.action-button.clear-button {
+    background-color: #ff9800;
+    margin-top: 10px;
+}
+.action-button.clear-button:hover {
+    background-color: #e68a00;
+}
+
+.action-button.proceed-button {
+    background-color: #2196f3;
+    margin-top: 20px;
+    width: 100%;
+}
+.action-button.proceed-button:hover {
+    background-color: #0b7dda;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.webcam-preview-container, .image-preview-container {
+    position: relative; /* Essential for canvas overlay */
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.webcam-feed, .uploaded-image-preview {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.detection-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* This will be managed by JS based on img dimensions */
+    /* width: 100%; 
+    height: 100%; */
+}
+
+.processing-message {
+    text-align: center;
+    padding: 15px;
+    font-style: italic;
+    color: #555;
+}
+
+.detected-results {
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.detected-results h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.detected-results ul {
+    list-style: inside;
+    padding-left: 0;
+}
+
+.detected-results li {
+    background-color: #e9f5e9;
+    margin-bottom: 5px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    color: #333;
+}
+
+.no-detection-message {
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+    font-style: italic;
+}
+
+/* .webcam-button{
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #8B4513;
+    border: none;
+    color: #ffffff;
+    margin-top: 30px;
+}
+
+.webcam-button:hover{
+    background-color: #b35c1f;
+    transition: 0.4s ease-in;
+} */
+
+/* .cam-view {
+    position: relative; 
+    width: 100%; 
+    max-width: 860px; 
+    height: auto; 
+    overflow: hidden; 
+    margin-bottom: 20px; 
+    border-radius: 5px;
+} */
+
+/* .webcam-video{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.highlighter {
+  background: rgba(0, 255, 0, 0.25);
+  border: 1px dashed #fff;
+  z-index: 1;
+  position: absolute;
+} */
+
+/* .prediction-label.prediction-label {
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;
+    width: 100%;
+    padding: 3px 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    border-radius: 3px;
+    white-space: nowrap;
+    z-index: 11; 
+    cursor: pointer; 
+    transition: background-color 0.2s ease;
+}
+
+.prediction-label:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.instruction-text {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 10px;
+    text-align: center;
+} */
+
+.selected-ingredients-section {
+    width: 100%;
+    max-width: 640px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-top: 20px;
+}
+
+.selected-ingredients-section h3 {
+    color: #333;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.selected-ingredients-list {
+    list-style-type: none;
+    padding: 0;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.selected-ingredients-list li {
+    background-color: #e9ecef;
+    padding: 8px 12px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+}

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useState, useEffect, useCallback } from 'react';
-import '../styles/ImageDetector.css';
+import '../styles/IngredientDetector.css';
 import * as tf from '@tensorflow/tfjs';
 
 // No longer need a direct const for commonIngredientsMap here
@@ -247,7 +247,8 @@ const IngredientDetector = ({ model, onIngredientsDetected }) => {
     };
 
     return (
-        <div className="ingredient-detector-container">
+        // <div className="ingredient-detector-container">
+        <div className={`ingredient-detector-component ${!model ? 'loading' : ''}`}>
             <p className="instruction-message">
                 Ready to see what you can cook? Simply <span>upload an existing photo</span> of your ingredients or <span>snap a new one</span> using your device's camera. Our AI will do the rest!
             </p>
