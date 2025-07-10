@@ -56,13 +56,11 @@
 }
 
 .button-label, .action-button {
-    background-color: #4CAF50;
-    color: white;
+    margin: 30px 30px 0px;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
-    font-size: 16px;
     transition: background-color 0.3s ease;
     text-align: center;
     text-decoration: none;
@@ -71,28 +69,25 @@
     justify-content: center;
 }
 
-.button-label, .action-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
+.button-label{
+    background-color: #8B4513;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-    text-align: center;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    color: #ffffff;
 }
 
-.button-label:hover, .action-button:hover {
-    background-color: #45a049;
+.button-label:hover{
+    background-color: #a05017;
+    transition: 0.4s ease-in;
 }
 
-.button-label:hover, .action-button:hover {
-    background-color: #45a049;
+.action-button{
+    background-color: #D9D9D9; 
+    border: 1px solid #8B4513;
+}
+
+.action-button:hover{
+    background-color: #FAF1E6;
+    transition: 0.4s ease-in;
 }
 
 .action-button.secondary {
