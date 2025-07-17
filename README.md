@@ -5,7 +5,7 @@
 
 ## 🚀 Live Demo
 
-[Visit the App](https://your-deployment-link.com)
+[Visit the App](https://recipbyte.vercel.app/)
 
 
 ## 🔑 Key Features
