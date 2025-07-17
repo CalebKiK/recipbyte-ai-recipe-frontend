@@ -58,7 +58,7 @@ export default function ImageDetectorPage() {
             <div className={`image-detector-model-loading ${model ? 'removed' : ''}`}>
                 <h3>Preparing our AI Chef! 🍳</h3>
                 <p>  
-                    We're loading the intelligent model that identifies your ingredients. This may take a few moments depending on your connection. Thanks for your patience!
+                    We&apos;re loading the intelligent model that identifies your ingredients. This may take a few moments depending on your connection. Thanks for your patience!
                 </p>
             </div>
             <IngredientDetector model={model} onIngredientsDetected={handleIngredientsDetected} />

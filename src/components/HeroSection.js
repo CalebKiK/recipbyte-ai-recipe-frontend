@@ -88,7 +88,7 @@ export default function HeroSection() {
     return (
         <div className="hero-section-component">
             <h1>Welcome{user?.username ? `, ${user.username}` : ''}!</h1>
-            <h2>Let's turn your ingredients into culinary magic.</h2>
+            <h2>Let&apos;s turn your ingredients into culinary magic.</h2>
             <div className="ingredients-component">
                 <div className="ingredients-section">
                     <div className="ingredients-input">

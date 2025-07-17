@@ -2,6 +2,7 @@
 
 import '../styles/RecipeCard.css';
 import { toSentenceCase, toTitleCase } from '@/utils/stringFormatters';
+import Image from 'next/image';
 
 export default function RecipeCard({ recipe, onSelectRecipe }) {
     
@@ -19,7 +20,7 @@ export default function RecipeCard({ recipe, onSelectRecipe }) {
 
     return (
         <div className="recipe-card" onClick={handleRecipeClick}>
-            {recipe.image_url && <img src={recipe.image_url} alt={recipe.title} />}
+            {recipe.image_url && <Image src={recipe.image_url} alt={recipe.title} />}
             <h5>{toTitleCase(recipe.title)}</h5>
             {recipe.description && <p>{toSentenceCase(recipe.description.substring(0, 200))}...</p>} {/* Optional description */}
             <p><span>Ingredients:</span> {displayIngredients}</p>

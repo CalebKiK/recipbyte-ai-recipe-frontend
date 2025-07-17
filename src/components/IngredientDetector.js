@@ -266,7 +266,7 @@ const IngredientDetector = ({ model, onIngredientsDetected }) => {
             {!commonIngredientsMap && <p className="loading-message">Loading ingredient definitions...</p>}
 
             <p className="instruction-message">
-                Ready to see what you can cook? Simply <span>upload an existing photo</span> of your ingredients or <span>snap a new one</span> using your device's camera. Our AI will do the rest!
+                Ready to see what you can cook? Simply <span>upload an existing photo</span> of your ingredients or <span>snap a new one</span> using your device&apos;s camera. Our AI will do the rest!
             </p>
             <div className="input-options">
                 <label className="button-label">
