@@ -27,7 +27,7 @@ export default function AuthPage() {
                     username: formData.username,
                     password: formData.password
                 });
-                console.log("Login response in auth/page.js:", res.data);
+                // console.log("Login response in auth/page.js:", res.data);
                 login(res.data.access);
                 localStorage.setItem("refreshToken", res.data.refresh);
                 toast.success(`Welcome back, ${formData.username}!`);
