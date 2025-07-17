@@ -3,6 +3,7 @@
 import React, { useRef, useState, useEffect, useCallback } from 'react';
 import '../styles/IngredientDetector.css';
 import * as tf from '@tensorflow/tfjs';
+import Image from 'next/image';
 
 const IngredientDetector = ({ model, onIngredientsDetected }) => {
     const videoRef = useRef(null);
@@ -299,7 +300,7 @@ const IngredientDetector = ({ model, onIngredientsDetected }) => {
 
             {imageSrc && (
                 <div className="image-preview-container">
-                    <img 
+                    <Image 
                         ref={imagePreviewRef} 
                         src={imageSrc} 
                         alt="Ingredient Preview" 
