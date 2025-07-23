@@ -247,14 +247,14 @@ const IngredientDetector = ({ model, onIngredientsDetected }) => {
 
             ctx.beginPath();
             ctx.rect(x, y, width, height);
-            ctx.lineWidth = 2;
+            ctx.lineWidth = 1;
             ctx.strokeStyle = '#00FF00';
             ctx.fillStyle = 'rgba(0, 255, 0, 0.2)'; 
             ctx.stroke();
             ctx.fillRect(x, y, width, height);
 
             ctx.fillStyle = '#00FF00';
-            ctx.font = '24px Arial';
+            ctx.font = '15px Arial';
             const textX = x;
             const textY = y > 20 ? y - 10 : y + 20; 
             ctx.fillText(`${p.class} (${Math.round(p.score * 100)}%)`, textX, textY);
@@ -303,7 +303,9 @@ const IngredientDetector = ({ model, onIngredientsDetected }) => {
                     <Image 
                         ref={imagePreviewRef} 
                         src={imageSrc} 
-                        alt="Ingredient Preview" 
+                        alt="Ingredient Preview"
+                        width={600}
+                        height={400}
                         className="uploaded-image-preview" 
                         // Always display img, but manage visibility of canvas/processing message
                         style={{ width: '100%', maxWidth: '600px', height: 'auto', display: 'block' }} 
@@ -340,6 +342,7 @@ const IngredientDetector = ({ model, onIngredientsDetected }) => {
                         ))}
                     </ul>
                     <p>Review the detected ingredients. You can manually add or remove any from the list below if needed.</p>
+                    
                     <button className="action-button proceed-button" onClick={() => onIngredientsDetected(detectedIngredients)}>
                         Confirm & Find Recipes
                     </button>

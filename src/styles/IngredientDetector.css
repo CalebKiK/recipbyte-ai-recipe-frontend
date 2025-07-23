@@ -26,7 +26,7 @@
     display: flex; /* Helps with layout */
     flex-direction: column;
     align-items: center; /* Center content */
-    padding: 20px;
+    padding: 10px 0px;
     border-radius: 8px;
     max-width: 900px; /* Adjust as needed */
     /* margin: 20px auto;  */
@@ -39,7 +39,7 @@
 }
 
 .instruction-message{
-    margin-top: 15px;
+    margin-top: 10px;
     line-height: 25px;
     text-align: left;
 }
@@ -70,13 +70,14 @@
 }
 
 .button-label{
-    background-color: #8B4513;
+    background-color: #c3cca7;
     border: none;
-    color: #ffffff;
+    
 }
 
 .button-label:hover{
-    background-color: #a05017;
+    background-color: #A9B190;
+    border: 1px solid #8B4513;
     transition: 0.4s ease-in;
 }
 
@@ -113,13 +114,21 @@
     background-color: #e68a00;
 }
 
-.action-button.proceed-button {
-    background-color: #2196f3;
+.action-button.proceed-button{
+    background-color: #8B4513;
+    border: none;
+    color: #ffffff;
+    max-width: 600px;
+    padding: 15px 30px;
     margin-top: 20px;
-    width: 100%;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
 }
-.action-button.proceed-button:hover {
-    background-color: #0b7dda;
+
+.action-button.proceed-button:hover{
+    background-color: #b57140;
+    transition: 0.4s ease-in;
 }
 
 .error-message {
@@ -177,14 +186,16 @@
 .detected-results ul {
     list-style: inside;
     padding-left: 0;
+    display: flex;
+    margin-bottom: 20px;
 }
 
 .detected-results li {
     background-color: #e9f5e9;
-    margin-bottom: 5px;
-    padding: 8px 12px;
-    border-radius: 4px;
-    color: #333;
+    margin: 0px 20px 10px 0px;
+    padding: 10px 20px 10px 10px;
+    border-radius: 3px;
+    color: #282828;
 }
 
 .no-detection-message {

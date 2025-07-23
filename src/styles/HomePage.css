@@ -108,12 +108,12 @@
 }
 
 .to-image-detection-btn{
-    background-color: #A9B190;
+    background-color: #c3cca7;
     border: none;
 }
 
 .to-image-detection-btn:hover{
-    background-color: #c3cca7;
+    background-color: #b3bd97;
     transition: 0.4s ease-in;
 }
 
