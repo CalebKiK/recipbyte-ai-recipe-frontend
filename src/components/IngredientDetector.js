@@ -14,6 +14,7 @@ const IngredientDetector = ({ model, onIngredientsDetected }) => {
     const [imageSrc, setImageSrc] = useState(null);
     const [capturedPhoto, setCapturedPhoto] = useState(null); // This state isn't strictly needed if imageSrc is always the source
     const [detectedIngredients, setDetectedIngredients] = useState([]);
+    const [ingredient, setIngredient] = useState('');
     const [processing, setProcessing] = useState(false);
     const [cameraActive, setCameraActive] = useState(false);  
     const [error, setError] = useState(null);
@@ -261,6 +262,22 @@ const IngredientDetector = ({ model, onIngredientsDetected }) => {
         });
     };
 
+    const handleInputChange = (event) => {
+        setIngredient(event.target.value);
+    };
+
+    const handleAddIngredient = () => {
+        if (ingredient.trim() !== '') {
+            setDetectedIngredients([...detectedIngredients, ingredient.trim().toLowerCase()]);
+            setIngredient('');
+        }
+    };
+
+    const handleRemoveIngredient = (index) => {
+        const updatedList = detectedIngredients.filter((_, i) => i !== index);
+        setDetectedIngredients(updatedList);
+    };
+
     return (
         <div className={`ingredient-detector-component ${!model || !commonIngredientsMap ? 'loading' : ''}`}>
             {/* Show loading for map as well */}
@@ -338,10 +355,28 @@ const IngredientDetector = ({ model, onIngredientsDetected }) => {
                     <h3>Detected Ingredients:</h3>
                     <ul>
                         {detectedIngredients.map((ing, index) => (
-                            <li key={index}>{ing}</li>
+                            <li key={index}>
+                                {ing}
+                                <button onClick={() => handleRemoveIngredient(index)}>x</button>
+                            </li>
+                            
                         ))}
                     </ul>
                     <p>Review the detected ingredients. You can manually add or remove any from the list below if needed.</p>
+
+                    <div className="ingredients-input">
+                        <input
+                            placeholder='Add your ingredients here...'
+                            value={ingredient}
+                            onChange={handleInputChange}
+                            onKeyDown={(e) =>{
+                                if (e.key === 'Enter') {
+                                    handleAddIngredient();
+                                }
+                            }}
+                        />
+                        <button className='add-ingredient-btn' onClick={handleAddIngredient}>Add</button>
+                    </div>
                     
                     <button className="action-button proceed-button" onClick={() => onIngredientsDetected(detectedIngredients)}>
                         Confirm & Find Recipes

@@ -198,6 +198,22 @@
     color: #282828;
 }
 
+.ingredients-input input{
+    height: 40px;
+    width: 400px;
+    padding: 0px 0px 0px 10px;
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.add-ingredient-btn{
+    height: 40px;
+    width: 80px;
+    border: 1px solid #8B4513;
+    background-color: #FAF1E6;
+    border-radius: 0px 10px 10px 0px;
+}
+
 .no-detection-message {
     text-align: center;
     margin-top: 20px;

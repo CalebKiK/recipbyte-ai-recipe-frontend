@@ -30,7 +30,7 @@ export default function Navbar() {
         <div className="navbar">
             <div className='navbar-logo'>
                 <Image src='/images/logo_option_3.png' alt='recipebyte-logo' height={40} width={40}/>
-                <h3>RECIPEBYTE</h3>
+                <h3>RECIPBYTE</h3>
             </div>
             <div className='navbar-links'>
                 <Link href="/homepage">Home</Link>
