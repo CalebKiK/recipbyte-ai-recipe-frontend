@@ -17,6 +17,15 @@ export default function Navbar() {
         toast.success("Logged out successfully!");
     };
 
+    const handleDashboardClick = (e) => {
+        e.preventDefault();
+        if (!token) {
+            toast.error("You must sign in to access dashboard.")
+        } else {
+            router.push("/dashboard");
+        }
+    };
+
     return (
         <div className="navbar">
             <div className='navbar-logo'>
@@ -27,9 +36,13 @@ export default function Navbar() {
                 <Link href="/homepage">Home</Link>
                 {/* <Link href="/recipes">Recipes</Link> */}
 
-                {token && (
+                {/* {token && (
                     <Link href="/dashboard">Dashboard</Link>
-                )}
+                )} */}
+
+                <Link href="/dashboard" legacyBehavior>
+                    <a onClick={handleDashboardClick}>Dashboard</a>
+                </Link>
                 
                 {!token ? (
                     <Link href="/auth">Login / Signup</Link>

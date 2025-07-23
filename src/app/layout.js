@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "ByteBistro",
+  title: "RecipByte",
   description: "Unlock culinary magic with AI! Just input your ingredients and let our smart generator create delicious recipes tailored to your pantry and preferences.",
   icons: {
     icon: "/favicon.png",

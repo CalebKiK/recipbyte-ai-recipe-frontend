@@ -46,7 +46,7 @@ python manage.py runserver
 
 ### Backend Setup (Django)
 ```bash
-cd backend-bytebistro
+cd backend-recipbyte
 python -m venv env
 source env/bin/activate
 pip install -r requirements.txt
