@@ -45,7 +45,7 @@ export default function Navbar() {
                 </Link>
                 
                 {!token ? (
-                    <Link href="/auth">Login / Signup</Link>
+                    <Link href="/auth">Sign In</Link>
                 ) : (
                     <button onClick={handleLogout}>Logout</button>
                 )}

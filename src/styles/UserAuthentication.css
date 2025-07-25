@@ -57,3 +57,84 @@
     background-color: #FAF1E6;
     transition: 0.4s ease-in;
 }
+
+@media (max-width: 500px) {
+    .user-authentication-component{
+        margin: 100px 40px;
+        border-radius: 5px;
+        padding: 30px 10px;
+    }
+
+    .user-authentication-component h2{
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    .user-authentication-component input{
+        margin: 10px 20px;
+        height: 35px;
+        padding-left: 10px;
+        border-radius: 5px;
+    }
+
+    .user-authentication-button{
+        padding: 5px 10px;
+        margin: 10px 30px 0px;
+        height: 35px;
+        font-size: 12px;
+        font-weight: 600;
+        border-radius: 5px;
+    }
+
+    .dont-have-account-button{
+        padding: 10px 15px;
+        margin-top: 20px;
+        font-size: 12px;
+        border-radius: 5px;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 860px) {
+    .user-authentication-component{
+        margin: 100px 150px;
+        padding: 30px 40px;
+    }
+
+    .user-authentication-component h2{
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .user-authentication-component input{
+        margin: 10px 0px;
+        padding-left: 10px;
+    }
+
+    .user-authentication-button{
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 860px) and (max-width: 1300px) {
+    .user-authentication-component{
+        margin: 100px 200px;
+        border-radius: 10px;
+        padding: 30px 100px;
+    }
+
+    .user-authentication-component h2{
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .user-authentication-component input{
+        margin: 10px 0px;
+        padding-left: 10px;
+    }
+
+    .user-authentication-button{
+        margin-top: 20px;
+    }
+}

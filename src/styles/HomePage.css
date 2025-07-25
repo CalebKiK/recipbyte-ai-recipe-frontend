@@ -162,6 +162,7 @@
         height: 30px;
         width: 60px;
         border-radius: 0px 5px 5px 0px;
+        font-size: 10px;
     }
 
     .filters-btn{
@@ -231,16 +232,16 @@
 
     .ingredients-input input{
         height: 40px;
-        width: 250px;
+        width: 300px;
         font-size: 13px;
-        padding: 0px 0px 0px 5px;
+        padding: 0px 0px 0px 10px;
         border-radius: 5px 0px 0px 5px;
     }
 
     .add-ingredient-btn{
         height: 40px;
         width: 80px;
-        border-radius: 0px 5px 5px 0px;
+        border-radius: 0px 10px 10px 0px;
     }
 
     .filters-btn{
@@ -310,7 +311,7 @@
 
     .ingredients-input input{
         height: 40px;
-        width: 300px;
+        width: 350px;
         font-size: 14px;
         padding: 0px 0px 0px 10px;
         border-radius: 5px 0px 0px 5px;
@@ -319,7 +320,7 @@
     .add-ingredient-btn{
         height: 40px;
         width: 80px;
-        border-radius: 0px 5px 5px 0px;
+        border-radius: 0px 10px 10px 0px;
     }
 
     .filters-btn{
@@ -345,7 +346,7 @@
 
     .homepage-btns button{
         margin: 20px 15px 0px;
-        padding: 10px;
+        padding: 10px 20px;
         font-size: 13px;
     }
 

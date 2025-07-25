@@ -81,22 +81,202 @@
     border-radius: 5px;
 }
 
-@media (max-width:500px) {
-    
+@media (max-width:600px) {
+    .user-dashboard-component{
+        margin: 30px 20px;
+        padding: 20px 0px;
+    }
+
+    .user-dashboard-component h1{
+        font-weight: 500;
+        font-size: 25px;
+    }
+
+    .dashboard-content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dashboard-links{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        border-right: none;
+    }
+
+    .dashboard-links button{
+        margin: 20px 5px;
+        border-radius: 5px;
+        padding: 10px 5px;
+        border: none;
+    }
+
+    .selected-dashboard-link{
+        border-radius: 5px;
+        margin: 20px 10px;
+    }
+
+    .user-preferences-component, .user-favourites-component, .recipe-history-component{
+        margin: 10px;
+    }
+
+    .user-preferences-component h2, .user-favourites-component h2, .recipe-history-component h2{
+        margin-bottom: 10px;
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    .recipe-item{
+        display: flex;
+        flex-direction: row;
+        margin: 5px;
+    }
+
+    .recipe-item-content h4{
+        font-size: 13px;
+        
+    }
+
+    .recipe-item-content p{
+        font-size: 11px;
+        line-height: 15px;
+    }
+
+    .recipe-item-remove-btn{
+        margin-left: 5px;
+    }
 }
 
-@media (min-width:500px) and (max-width: 860px) {
+@media (min-width:600px) and (max-width: 900px) {
+    .user-dashboard-component{
+        margin: 30px 110px;
+        padding: 20px 50px;
+    }
 
+    .user-dashboard-component h1{
+        font-weight: 500;
+        font-size: 25px;
+    }
+
+    .dashboard-content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dashboard-links{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        border-right: none;
+    }
+
+    .dashboard-links button{
+        margin: 20px 10px;
+        border-radius: 5px;
+        padding: 10px 20px;
+        border: none;
+    }
+
+    .selected-dashboard-link{
+        border-radius: 5px;
+        margin: 20px 10px;
+    }
+
+    .user-preferences-component, .user-favourites-component, .recipe-history-component{
+        margin: 15px;
+    }
+
+    .user-preferences-component h2, .user-favourites-component h2, .recipe-history-component h2{
+        margin-bottom: 10px;
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    .recipe-item{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .recipe-item-content h4{
+        font-size: 13px;
+    }
+
+    .recipe-item-content p{
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .recipe-item-remove-btn{
+        margin-left: 5px;
+    }
 }
 
-@media (min-width: 860px) and (max-width: 1030px) {
+@media (min-width: 900px) and (max-width: 1300px) {
+    .user-dashboard-component{
+        margin: 30px 140px;
+        padding: 20px 50px;
+    }
 
-}
+    .user-dashboard-component h1{
+        font-weight: 550;
+        font-size: 28px;
+    }
 
-@media (min-width: 1030px) and (max-width: 1250px) {
+    .dashboard-content{
+        display: flex;
+        flex-direction: column;
+    }
 
-}
+    .dashboard-links{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        border-right: none;
+    }
 
-@media (min-width: 1250px) and (max-width: 1440px) {
+    .dashboard-links button{
+        margin: 20px;
+        border-radius: 5px;
+        padding: 10px 20px;
+        border: none;
+    }
 
+    .selected-dashboard-link{
+        border-radius: 10px;
+        margin: 20px;
+    }
+
+    .user-preferences-component, .user-favourites-component, .recipe-history-component{
+        margin: 20px;
+    }
+
+    .user-preferences-component h2, .user-favourites-component h2, .recipe-history-component h2{
+        margin-bottom: 10px;
+        font-weight: 500;
+        font-size: 22px;
+    }
+
+    .recipe-item{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .recipe-item-content h4{
+        font-size: 13px;
+    }
+
+    .recipe-item-content p{
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .recipe-item-remove-btn{
+        margin-left: 5px;
+    }
 }
